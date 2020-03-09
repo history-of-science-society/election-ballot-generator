@@ -1,0 +1,16 @@
+{
+  "name": "election-ballot",
+  "version": "1.0.0",
+  "description": "Election Ballot for the History of Science Society",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Feigenbaum",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "ejs": "^3.0.1",
+    "node-sass": "^4.13.1"
+  }
+}
