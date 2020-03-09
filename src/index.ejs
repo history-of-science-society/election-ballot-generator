@@ -4,8 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Election Ballot</title>
+    <link rel="stylesheet" href="/dist/css/main.css" />
   </head>
   <body>
-    <h1><%= test %></h1>
+    <main>
+      <section class="council">
+        <% submissions.forEach(function(nominee) { %>
+        <article class="council__card">
+          <div class="council__img-container">
+            <img
+              src="<%= nominee.data['61994616'].value %>"
+              alt="<%= nominee.data['61992777'].value %>"
+            />
+          </div>
+        </article>
+        <% }) %>
+      </section>
+    </main>
   </body>
 </html>

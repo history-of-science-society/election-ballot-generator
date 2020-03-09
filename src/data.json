@@ -1,0 +1,829 @@
+{
+  "submissions": [
+    {
+      "id": "587703889",
+      "timestamp": "2020-03-05 16:53:29",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15",
+      "remote_addr": "82.207.239.67",
+      "payment_status": "",
+      "latitude": "51.532398223877",
+      "longitude": "7.2059998512268",
+      "read": "0",
+      "data": {
+        "61992777": {
+          "field": "61992777",
+          "label": "Name",
+          "type": "name",
+          "value": "first = Matteo\nlast = Valleriani"
+        },
+        "61992782": {
+          "field": "61992782",
+          "label": "Email",
+          "type": "email",
+          "value": "valleriani@mpiwg-berlin.mpg.de"
+        },
+        "75506963": {
+          "field": "75506963",
+          "label": "For which position are you running?",
+          "type": "select",
+          "value": "Council"
+        },
+        "61992786": {
+          "field": "61992786",
+          "label": "Current Position",
+          "type": "text",
+          "value": "Research Group Leader, Max Planck Institute for the History of Science"
+        },
+        "61993103": {
+          "field": "61993103",
+          "label": "Related Positions",
+          "type": "text",
+          "value": "Honorary Prof. Technische Universität Berlin, Prof. for Special Appointments at the Tel Aviv University"
+        },
+        "61992804": {
+          "field": "61992804",
+          "label": "HSS and Related Professional Activities",
+          "type": "textarea",
+          "value": "My first HSS annual meeting was in 2007 in Arlington. Many further annual meetings followed.\r\nI was Advisory Editor of the Journal Isis between 2015 and 2017"
+        },
+        "61992990": {
+          "field": "61992990",
+          "label": "How many publications would you like to list (max 10)?",
+          "type": "number",
+          "value": "6"
+        },
+        "61994743": {
+          "field": "61994743",
+          "label": "Personal Website, Twitter Handle, or Other Online Profile",
+          "type": "text",
+          "value": "https://www.mpiwg-berlin.mpg.de/users/valleriani"
+        },
+        "61994616": {
+          "field": "61994616",
+          "label": "Headshot File Upload",
+          "type": "image",
+          "value": "https://s3.amazonaws.com/files.formstack.com/uploads/2995119/61994616/587703889/61994616_img_2336.jpg"
+        },
+        "89179115": {
+          "field": "89179115",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Book"
+        },
+        "89179120": {
+          "field": "89179120",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Galileo Engineer"
+        },
+        "89179122": {
+          "field": "89179122",
+          "label": "City of Publication",
+          "type": "text",
+          "value": "Dordrecht"
+        },
+        "89179123": {
+          "field": "89179123",
+          "label": "Publisher",
+          "type": "text",
+          "value": "Springer"
+        },
+        "89179127": {
+          "field": "89179127",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2010"
+        },
+        "89179410": {
+          "field": "89179410",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Other: Edited volume"
+        },
+        "89179425": {
+          "field": "89179425",
+          "label": "Other Citation",
+          "type": "textarea",
+          "value": "M. Valleriani (ed.), De Sphaera of Johannes de Sacrobosco in the Early Modern Period: The Authors of the Commentaries, Springer Nature, Cham, 2020."
+        },
+        "89179431": {
+          "field": "89179431",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Other: Edited volume"
+        },
+        "89179446": {
+          "field": "89179446",
+          "label": "Other Citation",
+          "type": "textarea",
+          "value": "M. Valleriani (ed.), The Structures of Practical Knowledge, Springer, Dordrecht, 2017."
+        },
+        "89179460": {
+          "field": "89179460",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179464": {
+          "field": "89179464",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "The Emergence of Epistemic Communities in the Sphaera Corpus: Mechanisms of Knowledge Evolution"
+        },
+        "89179465": {
+          "field": "89179465",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Journal of Historical Network Research"
+        },
+        "89179469": {
+          "field": "89179469",
+          "label": "Volume",
+          "type": "text",
+          "value": "3"
+        },
+        "89179472": {
+          "field": "89179472",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2019"
+        },
+        "89179473": {
+          "field": "89179473",
+          "label": "Pages",
+          "type": "text",
+          "value": "50–91"
+        },
+        "89179474": {
+          "field": "89179474",
+          "label": "DOI",
+          "type": "text",
+          "value": "https://doi.org/10.25517/jhnr.v3i1.63"
+        },
+        "89179476": {
+          "field": "89179476",
+          "label": "Notes or Concerns",
+          "type": "text",
+          "value": "Authros are: Valleriani Matteo, Florian Kräutli, Maryam Zamani, Alejandro Tejedor, Christoph Sander, Malte Vogl, Sabine Bertram, Gesa Funke, and Holger Kantz"
+        },
+        "89179482": {
+          "field": "89179482",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179486": {
+          "field": "89179486",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Ancient Pneumatics Transformed during the Early Modern Period"
+        },
+        "89179487": {
+          "field": "89179487",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Nuncius"
+        },
+        "89179491": {
+          "field": "89179491",
+          "label": "Volume",
+          "type": "text",
+          "value": "29"
+        },
+        "89179494": {
+          "field": "89179494",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2014"
+        },
+        "89179495": {
+          "field": "89179495",
+          "label": "Pages",
+          "type": "text",
+          "value": "127–173"
+        },
+        "89179505": {
+          "field": "89179505",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Book"
+        },
+        "89179510": {
+          "field": "89179510",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Metallurgy, Ballistics and Epistemic Instruments. The «Nova scientia» of Nicolò Tartaglia"
+        },
+        "89179512": {
+          "field": "89179512",
+          "label": "City of Publication",
+          "type": "text",
+          "value": "Berlin"
+        },
+        "89179513": {
+          "field": "89179513",
+          "label": "Publisher",
+          "type": "text",
+          "value": "Edition Open Sources"
+        },
+        "89179517": {
+          "field": "89179517",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2013"
+        }
+      }
+    },
+    {
+      "id": "587890334",
+      "timestamp": "2020-03-06 06:25:22",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0",
+      "remote_addr": "212.90.213.98",
+      "payment_status": "",
+      "latitude": "46.432998657227",
+      "longitude": "6.9113998413086",
+      "read": "1",
+      "data": {
+        "61992777": {
+          "field": "61992777",
+          "label": "Name",
+          "type": "name",
+          "value": "first = Luis\nlast = Campos"
+        },
+        "61992782": {
+          "field": "61992782",
+          "label": "Email",
+          "type": "email",
+          "value": "luiscampos@unm.edu"
+        },
+        "75506963": {
+          "field": "75506963",
+          "label": "For which position are you running?",
+          "type": "select",
+          "value": "Secretary"
+        },
+        "61992786": {
+          "field": "61992786",
+          "label": "Current Position",
+          "type": "text",
+          "value": "Associate Professor and Regents' Lecturer, History Department, University of New Mexico"
+        },
+        "61992804": {
+          "field": "61992804",
+          "label": "HSS and Related Professional Activities",
+          "type": "textarea",
+          "value": "HSS Secretary, 2017-present\r\nHSS Nominating Committee, 2014-2015\r\nHSS Forum for the History of Science in America (FHSA), steering committee, 2012-2014\r\nMember of the Editorial Board, Journal of the History of Biology\r\nI have attended every HSS meeting since 2000 apart from one.\r\n"
+        },
+        "61992990": {
+          "field": "61992990",
+          "label": "How many publications would you like to list (max 10)?",
+          "type": "number",
+          "value": "9"
+        },
+        "61994743": {
+          "field": "61994743",
+          "label": "Personal Website, Twitter Handle, or Other Online Profile",
+          "type": "text",
+          "value": "https://history.unm.edu/people/faculty/profile/luis-campos.html"
+        },
+        "61994616": {
+          "field": "61994616",
+          "label": "Headshot File Upload",
+          "type": "image",
+          "value": "https://s3.amazonaws.com/files.formstack.com/uploads/2995119/61994616/587890334/61994616_luis_campos.jpg"
+        },
+        "89179115": {
+          "field": "89179115",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Book"
+        },
+        "89179120": {
+          "field": "89179120",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Radium and the Secret of Life"
+        },
+        "89179123": {
+          "field": "89179123",
+          "label": "Publisher",
+          "type": "text",
+          "value": "University of Chicago Press"
+        },
+        "89179127": {
+          "field": "89179127",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2015"
+        },
+        "89179410": {
+          "field": "89179410",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Chapter or other part of edited book"
+        },
+        "89179414": {
+          "field": "89179414",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Life as It Could Be"
+        },
+        "89179415": {
+          "field": "89179415",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Social and Conceptual Issues in Astrobiology"
+        },
+        "89179416": {
+          "field": "89179416",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": "Kelly Smith and Carlos Mariscal, ed."
+        },
+        "89179418": {
+          "field": "89179418",
+          "label": "Publisher",
+          "type": "text",
+          "value": "Oxford University Press"
+        },
+        "89179422": {
+          "field": "89179422",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2020"
+        },
+        "89179423": {
+          "field": "89179423",
+          "label": "Pages",
+          "type": "text",
+          "value": "101-114"
+        },
+        "89179431": {
+          "field": "89179431",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179435": {
+          "field": "89179435",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Other Genetic Alphabets"
+        },
+        "89179436": {
+          "field": "89179436",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": " Journal of Design and Science"
+        },
+        "89179442": {
+          "field": "89179442",
+          "label": "Publication Season or Month",
+          "type": "text",
+          "value": "December"
+        },
+        "89179443": {
+          "field": "89179443",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2018"
+        },
+        "89179447": {
+          "field": "89179447",
+          "label": "Notes or Concerns",
+          "type": "text",
+          "value": "MIT Media Lab"
+        },
+        "89179460": {
+          "field": "89179460",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Chapter or other part of edited book"
+        },
+        "89179464": {
+          "field": "89179464",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Neanderthals in Space: George Church’s Modest Steps Toward Possible Futures"
+        },
+        "89179465": {
+          "field": "89179465",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Dreamers, Visionaries and Revolutionaries in the Life Sciences"
+        },
+        "89179466": {
+          "field": "89179466",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": "Oren Harman and Michael Dietrich"
+        },
+        "89179468": {
+          "field": "89179468",
+          "label": "Publisher",
+          "type": "text",
+          "value": "University of Chicago Press"
+        },
+        "89179472": {
+          "field": "89179472",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2018"
+        },
+        "89179473": {
+          "field": "89179473",
+          "label": "Pages",
+          "type": "text",
+          "value": "143-160"
+        },
+        "89179482": {
+          "field": "89179482",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Chapter or other part of edited book"
+        },
+        "89179486": {
+          "field": "89179486",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Dialectics Denied: Muller, Lysenkoism, and the Fate of Chromosomal Mutation"
+        },
+        "89179487": {
+          "field": "89179487",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "The Lysenko Controversy as a Global Phenomenon: Genetics and Agriculture in the Soviet Union and Beyond"
+        },
+        "89179488": {
+          "field": "89179488",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": "William de Jong-Lambert, and Nikolai Krementsov"
+        },
+        "89179490": {
+          "field": "89179490",
+          "label": "Publisher",
+          "type": "text",
+          "value": "Palgrave-Macmillan"
+        },
+        "89179494": {
+          "field": "89179494",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2017"
+        },
+        "89179505": {
+          "field": "89179505",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Chapter or other part of edited book"
+        },
+        "89179509": {
+          "field": "89179509",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Outsiders and In-Laws: Drew Endy and the Case of Synthetic Biology"
+        },
+        "89179510": {
+          "field": "89179510",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Outsider Scientists: Routes to Innovation in Biology"
+        },
+        "89179511": {
+          "field": "89179511",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": " Oren Harman and Michael Dietrich"
+        },
+        "89179513": {
+          "field": "89179513",
+          "label": "Publisher",
+          "type": "text",
+          "value": "University of Chicago Press"
+        },
+        "89179517": {
+          "field": "89179517",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2013"
+        },
+        "89179518": {
+          "field": "89179518",
+          "label": "Pages",
+          "type": "text",
+          "value": "331-348"
+        },
+        "89179523": {
+          "field": "89179523",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179527": {
+          "field": "89179527",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "The BioBrick™ Road"
+        },
+        "89179528": {
+          "field": "89179528",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Biosocieties "
+        },
+        "89179532": {
+          "field": "89179532",
+          "label": "Volume",
+          "type": "text",
+          "value": "7"
+        },
+        "89179533": {
+          "field": "89179533",
+          "label": "Number",
+          "type": "text",
+          "value": "2"
+        },
+        "89179534": {
+          "field": "89179534",
+          "label": "Publication Season or Month",
+          "type": "text",
+          "value": "June"
+        },
+        "89179535": {
+          "field": "89179535",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2012"
+        },
+        "89179536": {
+          "field": "89179536",
+          "label": "Pages",
+          "type": "text",
+          "value": " 115-139"
+        },
+        "89179550": {
+          "field": "89179550",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Book"
+        },
+        "89179555": {
+          "field": "89179555",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Making Mutations: Objects, Practices, Contexts"
+        },
+        "89179557": {
+          "field": "89179557",
+          "label": "City of Publication",
+          "type": "text",
+          "value": "Berlin"
+        },
+        "89179558": {
+          "field": "89179558",
+          "label": "Publisher",
+          "type": "text",
+          "value": "Max Planck Institute for the History of Science"
+        },
+        "89179562": {
+          "field": "89179562",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2010"
+        },
+        "89179566": {
+          "field": "89179566",
+          "label": "Notes or Concerns",
+          "type": "text",
+          "value": "with Alexander Schwerin, eds."
+        },
+        "89179575": {
+          "field": "89179575",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179579": {
+          "field": "89179579",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "The Birth of Living Radium"
+        },
+        "89179580": {
+          "field": "89179580",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Representations "
+        },
+        "89179584": {
+          "field": "89179584",
+          "label": "Volume",
+          "type": "text",
+          "value": "97"
+        },
+        "89179587": {
+          "field": "89179587",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2006"
+        },
+        "89179588": {
+          "field": "89179588",
+          "label": "Pages",
+          "type": "text",
+          "value": "1-29"
+        }
+      }
+    },
+    {
+      "id": "588389159",
+      "timestamp": "2020-03-08 13:51:48",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+      "remote_addr": "216.80.100.147",
+      "payment_status": "",
+      "latitude": "41.975898742676",
+      "longitude": "-87.701599121094",
+      "read": "0",
+      "data": {
+        "61992777": {
+          "field": "61992777",
+          "label": "Name",
+          "type": "name",
+          "value": "first = Eli \nlast = Nelson"
+        },
+        "61992782": {
+          "field": "61992782",
+          "label": "Email",
+          "type": "email",
+          "value": "ewn2@williams.edu"
+        },
+        "75506963": {
+          "field": "75506963",
+          "label": "For which position are you running?",
+          "type": "select",
+          "value": "Council"
+        },
+        "61992786": {
+          "field": "61992786",
+          "label": "Current Position",
+          "type": "text",
+          "value": "Assistant Professor, American Studies Program, Williams College"
+        },
+        "61993103": {
+          "field": "61993103",
+          "label": "Related Positions",
+          "type": "text",
+          "value": "Director of Fellowships, The Center for Black, Brown, and Queer Studies "
+        },
+        "61992990": {
+          "field": "61992990",
+          "label": "How many publications would you like to list (max 10)?",
+          "type": "number",
+          "value": "4"
+        },
+        "61994743": {
+          "field": "61994743",
+          "label": "Personal Website, Twitter Handle, or Other Online Profile",
+          "type": "text",
+          "value": "https://american-studies.williams.edu/profile/ewn2/"
+        },
+        "61994616": {
+          "field": "61994616",
+          "label": "Headshot File Upload",
+          "type": "image",
+          "value": "https://s3.amazonaws.com/files.formstack.com/uploads/2995119/61994616/588389159/61994616_en_photo.png"
+        },
+        "89179115": {
+          "field": "89179115",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179119": {
+          "field": "89179119",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Walking to the Future in the Steps of our Ancestors”: Haudenosaunee Traditional Ecological Knowledge and Queer Time in the Climate Change Era"
+        },
+        "89179120": {
+          "field": "89179120",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "New Geographies "
+        },
+        "89179121": {
+          "field": "89179121",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": "Mariano Gomez Luque and Ghazal Jafari"
+        },
+        "89179124": {
+          "field": "89179124",
+          "label": "Volume",
+          "type": "text",
+          "value": "09: Posthuman "
+        },
+        "89179127": {
+          "field": "89179127",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2017"
+        },
+        "89179410": {
+          "field": "89179410",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Chapter or other part of edited book"
+        },
+        "89179414": {
+          "field": "89179414",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "When Colonization Road Ends…"
+        },
+        "89179415": {
+          "field": "89179415",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Extraction Empire: Sourcing the Scales, Systems, and States of Canada’s Global Resource Empire"
+        },
+        "89179416": {
+          "field": "89179416",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": "Pierre Bélanger"
+        },
+        "89179417": {
+          "field": "89179417",
+          "label": "City of Publication",
+          "type": "text",
+          "value": "Cambridge "
+        },
+        "89179418": {
+          "field": "89179418",
+          "label": "Publisher",
+          "type": "text",
+          "value": "MIT Press"
+        },
+        "89179422": {
+          "field": "89179422",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2018"
+        },
+        "89179431": {
+          "field": "89179431",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Other: "
+        },
+        "89179446": {
+          "field": "89179446",
+          "label": "Other Citation",
+          "type": "textarea",
+          "value": "“Canoes in Space,” in Shireen Hamza (producer), Ventricles Podcast, Season 1, Ep. 5, 2018: https://ventricles.simplecast.fm/dc580fc6."
+        },
+        "89179460": {
+          "field": "89179460",
+          "label": "Publication Type",
+          "type": "radio",
+          "value": "Journal article"
+        },
+        "89179464": {
+          "field": "89179464",
+          "label": "Chapter, section, or article title",
+          "type": "text",
+          "value": "Native American Doctor: Or, How I learned to Stop Worrying and Love the Prior"
+        },
+        "89179465": {
+          "field": "89179465",
+          "label": "Title of Book or Journal",
+          "type": "text",
+          "value": "Cosmologics Magazine "
+        },
+        "89179466": {
+          "field": "89179466",
+          "label": "Editor(s), translator(s)",
+          "type": "text",
+          "value": "Myrna Perez Sheldon "
+        },
+        "89179469": {
+          "field": "89179469",
+          "label": "Volume",
+          "type": "text",
+          "value": "Black/Brown/Queer Geographies and Temporalities"
+        },
+        "89179472": {
+          "field": "89179472",
+          "label": "Publication Year",
+          "type": "number",
+          "value": "2018"
+        }
+      }
+    }
+  ],
+  "total": 4,
+  "pages": 1,
+  "pretty_field_id": "61992777"
+}
