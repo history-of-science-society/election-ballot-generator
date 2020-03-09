@@ -4,12 +4,15 @@
   "description": "Election Ballot for the History of Science Society",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index",
+    "scss": "node-sass -w src/scss/main.scss sass -o dist/css"
   },
   "author": "Ryan Feigenbaum",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "node-sass": "^4.13.1"
   }
