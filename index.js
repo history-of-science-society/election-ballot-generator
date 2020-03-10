@@ -97,18 +97,24 @@ class Nominee {
         const book = `${this.last}, ${this.first}. <em>${title}</em>. ${
           city ? city + ": " : ""
         }${publisher}, ${year}.`;
-        console.log(book);
         return book;
       case "Chapter or other part of edited book":
-        const section = `&ldquo;${sectionTitle}.&rdquo; In <em>${title}</em>, ${"edited by " +
-          editor +
-          ", "}${pages}. ${city + ": "}${publisher}, ${year}.${" " +
-          doi +
-          "."}`;
+        const section = `${this.last}, ${
+          this.first
+        }. &ldquo;${sectionTitle}.&rdquo; In <em>${title}</em>, ${
+          editor ? "edited by " + editor + ", " : ""
+        }${pages ? pages : ""}. ${
+          city ? city + ": " : ""
+        }${publisher}, ${year}.${doi ? " " + doi + "." : ""}`;
         return section;
       case "Journal article":
-        const article = `&ldquo;${sectionTitle}.&rdquo; <em>${title}</em> ${vol}${", no. " +
-          num} (${season + " "}${year}): ${pages}.${" " + doi + "."}`;
+        const article = `${this.last}, ${
+          this.first
+        }. &ldquo;${sectionTitle}.&rdquo; <em>${title}</em> ${vol ? vol : ""}${
+          num ? ", no. " + num : ""
+        } (${season ? season + " " : ""}${year})${pages ? ": " + pages : ""}.${
+          doi ? " " + doi + "." : ""
+        }`;
         return article;
       case "Other":
         return other;

@@ -10,6 +10,7 @@
   <body>
     <%- sprite.icons %>
     <main>
+      <!-- Council  -->
       <section class="nominee">
         <% council.forEach(function(nominee) { %>
         <article class="nominee__card">
@@ -57,7 +58,32 @@
             <p><%= nominee.campaignStatement %></p>
             <% } %>
           </div>
-          <div class="nominee__publications"></div>
+          <div class="nominee__publications">
+            <p class="nominee__label">Publications</p>
+            <ol>
+              <% if (nominee.pub1) { %>
+              <li><%- nominee.pub1 %></li>
+              <% } %> <% if (nominee.pub2) { %>
+              <li><%- nominee.pub2 %></li>
+              <% } %> <% if (nominee.pub3) { %>
+              <li><%- nominee.pub3 %></li>
+              <% } %> <% if (nominee.pub4) { %>
+              <li><%- nominee.pub4 %></li>
+              <% } %> <% if (nominee.pub5) { %>
+              <li><%- nominee.pub5 %></li>
+              <% } %> <% if (nominee.pub6) { %>
+              <li><%- nominee.pub6 %></li>
+              <% } %> <% if (nominee.pub7) { %>
+              <li><%- nominee.pub7 %></li>
+              <% } %> <% if (nominee.pub8) { %>
+              <li><%- nominee.pub8 %></li>
+              <% } %> <% if (nominee.pub9) { %>
+              <li><%- nominee.pub9 %></li>
+              <% } %> <% if (nominee.pub10) { %>
+              <li><%- nominee.pub10 %></li>
+              <% } %>
+            </ol>
+          </div>
           <footer></footer>
         </article>
         <% }) %>
@@ -107,8 +133,33 @@
               <% }) %>
             </ul>
             <p><% nominee.hss %></p>
-
             <% } %>
+          </div>
+          <div class="nominee__publications">
+            <p class="nominee__label">Publications</p>
+            <ol>
+              <% if (nominee.pub1) { %>
+              <li><%- nominee.pub1 %></li>
+              <% } %> <% if (nominee.pub2) { %>
+              <li><%- nominee.pub2 %></li>
+              <% } %> <% if (nominee.pub3) { %>
+              <li><%- nominee.pub3 %></li>
+              <% } %> <% if (nominee.pub4) { %>
+              <li><%- nominee.pub4 %></li>
+              <% } %> <% if (nominee.pub5) { %>
+              <li><%- nominee.pub5 %></li>
+              <% } %> <% if (nominee.pub6) { %>
+              <li><%- nominee.pub6 %></li>
+              <% } %> <% if (nominee.pub7) { %>
+              <li><%- nominee.pub7 %></li>
+              <% } %> <% if (nominee.pub8) { %>
+              <li><%- nominee.pub8 %></li>
+              <% } %> <% if (nominee.pub9) { %>
+              <li><%- nominee.pub9 %></li>
+              <% } %> <% if (nominee.pub10) { %>
+              <li><%- nominee.pub10 %></li>
+              <% } %>
+            </ol>
           </div>
           <footer></footer>
         </article>

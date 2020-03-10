@@ -36,7 +36,7 @@ html {
     width: 2rem;
   }
   &__label {
-    font-size: 0.95;
+    font-size: 0.95rem;
     text-transform: uppercase;
     opacity: 0.75;
     font-weight: 600;
@@ -48,5 +48,15 @@ html {
     & + p {
       margin-top: 0;
     }
+  }
+  &__publication-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 0 3px;
+    color: #ffffff;
+    background-color: #464545;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-weight: 600;
   }
 }
