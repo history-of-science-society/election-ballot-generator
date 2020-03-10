@@ -5,18 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Election Ballot</title>
     <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="/dist/css/evil-icons.min.css" />
   </head>
   <body>
+    <%- sprite.icons %>
     <main>
-      <section class="council">
-        <% submissions.forEach(function(nominee) { %>
-        <article class="council__card">
-          <div class="council__img-container">
-            <img
-              src="<%= nominee.data['61994616'].value %>"
-              alt="<%= nominee.data['61992777'].value %>"
-            />
+      <section class="nominee">
+        <% council.forEach(function(nominee) { %>
+        <article class="nominee__card">
+          <p class="nominee__position-sought"><%= nominee.position %></p>
+          <div class="nominee__img-container">
+            <img src="<%= nominee.headshot %>" alt="<%= nominee.name %>" />
           </div>
+          <header>
+            <!-- Twitter and Website-->
+            <% if (nominee.website.source === 'twitter' ||
+            nominee.website.source === 'website') { %>
+            <a class="nominee__header-link" href="<%= nominee.website.url %>">
+              <% } %>
+              <h2 id="<%= nominee.name %>"><%= nominee.name %></h2>
+              <% if (nominee.website.source === 'twitter' ||
+              nominee.website.source === 'website') { %> <%-
+              nominee.website.icon %>
+            </a>
+            <% } %>
+          </header>
+          <div class="nominee__section">
+            <!-- Current Position  -->
+            <% if (nominee.currentPosition) { %>
+            <p class="nominee__label">Current Position</p>
+            <p><%= nominee.currentPosition %></p>
+            <% } %>
+            <!-- Related Position  -->
+            <% if (nominee.relatedPosition) { %>
+            <p class="nominee__label">Related Position(s)</p>
+            <p><%= nominee.relatedPosition %></p>
+            <% } %>
+            <!-- HSS Related Statement  -->
+            <% if (nominee.hss) { %>
+            <p class="nominee__label">HSS and Related Activities</p>
+            <ul>
+              <% nominee.hss.forEach(function(item) { %>
+              <li><%- item %></li>
+              <% }) %>
+            </ul>
+            <p><% nominee.hss %></p>
+            <% } %>
+            <!-- Campaign Statement  -->
+            <% if (nominee.campaignStatement) { %>
+            <p class="nominee__label">Campaign Statement</p>
+            <p><%= nominee.campaignStatement %></p>
+            <% } %>
+          </div>
+          <div class="nominee__publications"></div>
+          <footer></footer>
+        </article>
+        <% }) %>
+      </section>
+      <section class="nominee">
+        <% secretary.forEach(function(nominee) { %>
+        <article class="nominee__card">
+          <p class="nominee__position-sought"><%= nominee.position %></p>
+          <div class="nominee__img-container">
+            <img src="<%= nominee.headshot %>" alt="<%= nominee.name %>" />
+          </div>
+          <header>
+            <!-- Twitter and Website-->
+            <% if (nominee.website.source === 'twitter' ||
+            nominee.website.source === 'website') { %>
+            <a class="nominee__header-link" href="<%= nominee.website.url %>">
+              <% } %>
+              <h2 id="<%= nominee.name %>"><%= nominee.name %></h2>
+              <% if (nominee.website.source === 'twitter' ||
+              nominee.website.source === 'website') { %> <%-
+              nominee.website.icon %>
+            </a>
+            <% } %>
+          </header>
+          <div>
+            <!-- Current Position  -->
+            <% if (nominee.currentPosition) { %>
+            <p class="nominee__label">Current Position</p>
+            <p><%= nominee.currentPosition %></p>
+            <% } %>
+            <!-- Related Position  -->
+            <% if (nominee.relatedPosition) { %>
+            <p class="nominee__label">Related Position(s)</p>
+            <p><%= nominee.relatedPosition %></p>
+            <% } %>
+            <!-- Campaign Statement  -->
+            <% if (nominee.campaignStatement) { %>
+            <p class="nominee__label">Campaign Statement</p>
+            <p><%= nominee.campaignStatement %></p>
+            <% } %>
+            <!-- HSS Related Statement  -->
+            <% if (nominee.hss) { %>
+            <p class="nominee__label">HSS and Related Activities</p>
+            <ul>
+              <% nominee.hss.forEach(function(item) { %>
+              <li><%- item %></li>
+              <% }) %>
+            </ul>
+            <p><% nominee.hss %></p>
+
+            <% } %>
+          </div>
+          <footer></footer>
         </article>
         <% }) %>
       </section>
