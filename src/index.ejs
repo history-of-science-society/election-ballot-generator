@@ -6,6 +6,58 @@
     <title>Election Ballot</title>
     <link rel="stylesheet" href="/dist/css/main.css" />
     <link rel="stylesheet" href="/dist/css/evil-icons.min.css" />
+    <style>
+      .nominee {
+        width: 100%;
+      }
+      .nominee__card {
+        margin: 1rem;
+      }
+      .nominee__img-container {
+        height: 20rem;
+        width: 20rem;
+        max-width: 100%;
+      }
+      .nominee__img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .nominee__header-link {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        padding: 1rem 0;
+        width: fit-content;
+      }
+      .nominee__icon svg {
+        height: 2rem;
+        width: 2rem;
+      }
+      .nominee__label {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        opacity: 0.75;
+        font-weight: 600;
+        margin-bottom: 0;
+        background: #dddddd;
+        padding: 2px 5px;
+      }
+      .nominee__label:first-child,
+      .nominee__label + p {
+        margin-top: 0;
+      }
+      .nominee__publication-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        padding: 0 3px;
+        color: #ffffff;
+        background-color: #464545;
+        border-radius: 3px;
+        margin-right: 5px;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <%- sprite.icons %>
@@ -88,6 +140,7 @@
         </article>
         <% }) %>
       </section>
+      <!-- Secretary  -->
       <section class="nominee">
         <% secretary.forEach(function(nominee) { %>
         <article class="nominee__card">
@@ -137,6 +190,14 @@
           </div>
           <div class="nominee__publications">
             <p class="nominee__label">Publications</p>
+            <div class="nominee__publication-covers">
+              <% if (nominee.bookGallery) {
+              nominee.bookGallery.forEach(function(item) { %>
+              <a class="nominee__covers-links" href="<%= item.url %>"
+                ><img class="nominee__covers-img" src="<%= item.img %>" alt=""
+              /></a>
+              <% } ) } %>
+            </div>
             <ol>
               <% if (nominee.pub1) { %>
               <li><%- nominee.pub1 %></li>

@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index",
+    "build": "node index && postcss dist/css/main.css --use autoprefixer -o dist/css/main-p.css",
     "scss": "node-sass -w src/scss/main.scss sass -o dist/css"
   },
   "author": "Ryan Feigenbaum",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.7.4",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
-    "evil-icons": "^1.10.1",
-    "node-sass": "^4.13.1"
+    "evil-icons": "^1.10.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0"
   }
 }

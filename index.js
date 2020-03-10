@@ -54,14 +54,17 @@ class Nominee {
     this.headshot = this.getValue(item.data["61994616"]);
     this.pub1 = this.getPub(89179115, item.data);
     this.pub2 = this.getPub(89179410, item.data);
-    this.pub3 = this.getPub(89179430, item.data);
-    this.pub4 = this.getPub(89179431, item.data);
+    this.pub3 = this.getPub(89179431, item.data);
+    this.pub4 = this.getPub(89179460, item.data);
     this.pub5 = this.getPub(89179482, item.data);
     this.pub6 = this.getPub(89179505, item.data);
     this.pub7 = this.getPub(89179523, item.data);
     this.pub8 = this.getPub(89179550, item.data);
     this.pub9 = this.getPub(89179575, item.data);
     this.pub10 = this.getPub(89179596, item.data);
+    this.bookUrl = this.getValue(item.data["89486549"]);
+    this.bookImg = this.getValue(item.data["89486552"]);
+    this.bookGallery = this.createGallery(this.bookUrl, this.bookImg);
   }
 
   getValue(test) {
@@ -93,6 +96,8 @@ class Nominee {
     const other = this.getValue(data[type + 15]);
 
     switch (pubType) {
+      case null:
+        return null;
       case "Book":
         const book = `${this.last}, ${this.first}. <em>${title}</em>. ${
           city ? city + ": " : ""
@@ -102,10 +107,10 @@ class Nominee {
         const section = `${this.last}, ${
           this.first
         }. &ldquo;${sectionTitle}.&rdquo; In <em>${title}</em>, ${
-          editor ? "edited by " + editor + ", " : ""
-        }${pages ? pages : ""}. ${
-          city ? city + ": " : ""
-        }${publisher}, ${year}.${doi ? " " + doi + "." : ""}`;
+          editor ? "edited by " + editor : ""
+        }${pages ? ", " + pages : ""}. ${city ? city + ": " : ""}${
+          publisher ? publisher + ", " : ""
+        }${year}.${doi ? " " + doi + "." : ""}`;
         return section;
       case "Journal article":
         const article = `${this.last}, ${
@@ -116,10 +121,8 @@ class Nominee {
           doi ? " " + doi + "." : ""
         }`;
         return article;
-      case "Other":
-        return other;
       default:
-        return null;
+        return other;
     }
   }
 
@@ -150,8 +153,24 @@ class Nominee {
       return null;
     }
 
-    const mlArray = test.value.trim().split(/\r\n/);
+    const mlArray = test.value.trim().split(";");
     return mlArray;
+  }
+
+  createGallery(url, img) {
+    if (url !== null) {
+      const urlArray = url.split(",");
+      const imgArray = img.split(",");
+      const galleryArray = [];
+
+      urlArray.forEach((item, idx) => {
+        const object = { url: item, img: imgArray[idx] };
+        galleryArray.push(object);
+      });
+
+      return galleryArray;
+    }
+    return null;
   }
 }
 

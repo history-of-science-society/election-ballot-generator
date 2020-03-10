@@ -4,19 +4,94 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.fsBody {
+  .nominee {
+    width: 100%;
+    &__card {
+      margin: 1rem;
+    }
+
+    &__img-container {
+      height: 20rem;
+      width: 20rem;
+      max-width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__header-link {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      padding: 1rem 0;
+      width: fit-content;
+    }
+
+    &__icon svg {
+      height: 2rem;
+      width: 2rem;
+    }
+    &__label {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      opacity: 0.75;
+      font-weight: 600;
+      margin-bottom: 0;
+      background: #dddddd;
+      padding: 2px 5px;
+
+      &:first-child,
+      & + p {
+        margin-top: 0;
+      }
+    }
+    &__publication-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      padding: 0 3px;
+      color: #ffffff;
+      background-color: #464545;
+      border-radius: 3px;
+      margin-right: 5px;
+      font-weight: 600;
+    }
+    &__publication-covers {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    &__covers-links {
+      margin: 1rem 1rem 0 1rem;
+      &:hover img {
+        filter: saturate(1);
+        transition: filter 0.2s ease-out;
+      }
+    }
+    &__covers-img {
+      filter: saturate(0);
+      transition: filter 0.2s ease-out;
+      height: 250px;
+    }
+  }
+}
 
 .nominee {
-  display: flex;
   width: 100%;
   &__card {
-    width: 20rem;
     margin: 1rem;
-    // flex: 0;
   }
 
   &__img-container {
     height: 20rem;
-    width: 100%;
+    width: 20rem;
+    max-width: 100%;
     img {
       width: 100%;
       height: 100%;
@@ -28,7 +103,8 @@ html {
     display: flex;
     align-items: center;
     line-height: 1;
-    color: $blue;
+    padding: 1rem 0;
+    width: fit-content;
   }
 
   &__icon svg {
@@ -58,5 +134,22 @@ html {
     border-radius: 3px;
     margin-right: 5px;
     font-weight: 600;
+  }
+  &__publication-covers {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  &__covers-links {
+    margin: 1rem 1rem 0 1rem;
+    &:hover img {
+      filter: saturate(1);
+      transition: filter 0.2s ease-out;
+    }
+  }
+  &__covers-img {
+    filter: saturate(0);
+    transition: filter 0.2s ease-out;
+    height: 250px;
   }
 }
