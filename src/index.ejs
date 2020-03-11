@@ -6,7 +6,7 @@
     <title>Election Ballot</title>
     <link rel="stylesheet" href="/dist/css/main.css" />
     <link rel="stylesheet" href="/dist/css/evil-icons.min.css" />
-    <style>
+    <!-- <style>
       .nominee {
         width: 100%;
       }
@@ -57,7 +57,7 @@
         margin-right: 5px;
         font-weight: 600;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <%- sprite.icons %>
@@ -66,7 +66,9 @@
       <section class="nominee">
         <% council.forEach(function(nominee) { %>
         <article class="nominee__card">
-          <p class="nominee__position-sought"><%= nominee.position %></p>
+          <p class="nominee__position-sought">
+            Running for <%= nominee.position %>
+          </p>
           <div class="nominee__img-container">
             <img src="<%= nominee.headshot %>" alt="<%= nominee.name %>" />
           </div>
@@ -112,6 +114,14 @@
           </div>
           <div class="nominee__publications">
             <p class="nominee__label">Publications</p>
+            <div class="nominee__publication-covers">
+              <% if (nominee.bookGallery) {
+              nominee.bookGallery.forEach(function(item) { %>
+              <a class="nominee__covers-links" href="<%= item.url %>"
+                ><img class="nominee__covers-img" src="<%= item.img %>" alt=""
+              /></a>
+              <% } ) } %>
+            </div>
             <ol>
               <% if (nominee.pub1) { %>
               <li><%- nominee.pub1 %></li>
@@ -136,7 +146,7 @@
               <% } %>
             </ol>
           </div>
-          <footer></footer>
+          <footer class="nominee__footer"></footer>
         </article>
         <% }) %>
       </section>
@@ -144,7 +154,9 @@
       <section class="nominee">
         <% secretary.forEach(function(nominee) { %>
         <article class="nominee__card">
-          <p class="nominee__position-sought"><%= nominee.position %></p>
+          <p class="nominee__position-sought">
+            Running for <%= nominee.position %>
+          </p>
           <div class="nominee__img-container">
             <img src="<%= nominee.headshot %>" alt="<%= nominee.name %>" />
           </div>
@@ -222,7 +234,7 @@
               <% } %>
             </ol>
           </div>
-          <footer></footer>
+          <footer class="nominee__footer"></footer>
         </article>
         <% }) %>
       </section>

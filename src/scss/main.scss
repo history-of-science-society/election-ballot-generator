@@ -5,14 +5,20 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 main {
-  max-width: 1040px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .fsBody {
   .nominee {
     width: 100%;
+    &__position-sought {
+      background: #dddddd;
+      margin: 1rem 0;
+      padding: 0.25rem;
+      font-weight: 600;
+    }
     &__card {
-      margin: 1rem;
+      margin: 3rem 0;
     }
 
     &__img-container {
@@ -27,16 +33,18 @@ main {
     }
 
     &__header-link {
+      width: fit-content;
       display: flex;
       align-items: center;
-      line-height: 1;
-      padding: 1rem 0;
-      width: fit-content;
+
+      h2 {
+        margin: 1.5rem 0 1rem;
+      }
     }
 
     &__icon svg {
-      height: 2rem;
-      width: 2rem;
+      height: 1.5rem;
+      width: 1.5rem;
     }
     &__label {
       font-size: 0.95rem;
@@ -64,7 +72,6 @@ main {
     }
     &__publication-covers {
       display: flex;
-      justify-content: center;
       width: 100%;
     }
     &__covers-links {
@@ -79,13 +86,23 @@ main {
       transition: filter 0.2s ease-out;
       height: 250px;
     }
+    &__footer {
+      margin-top: 2rem;
+      border-bottom: 0.5rem solid #dddddd;
+    }
   }
 }
 
 .nominee {
   width: 100%;
+  &__position-sought {
+    background: #dddddd;
+    margin: 1rem 0;
+    padding: 0.25rem;
+    font-weight: 600;
+  }
   &__card {
-    margin: 1rem;
+    margin: 3rem 0;
   }
 
   &__img-container {
@@ -100,16 +117,18 @@ main {
   }
 
   &__header-link {
+    width: fit-content;
     display: flex;
     align-items: center;
-    line-height: 1;
-    padding: 1rem 0;
-    width: fit-content;
+
+    h2 {
+      margin: 1.5rem 0 1rem;
+    }
   }
 
   &__icon svg {
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
   &__label {
     font-size: 0.95rem;
@@ -137,7 +156,6 @@ main {
   }
   &__publication-covers {
     display: flex;
-    justify-content: center;
     width: 100%;
   }
   &__covers-links {
@@ -150,6 +168,10 @@ main {
   &__covers-img {
     filter: saturate(0);
     transition: filter 0.2s ease-out;
-    height: 250px;
+    height: 200px;
+  }
+  &__footer {
+    margin-top: 2rem;
+    border-bottom: 0.5rem solid #dddddd;
   }
 }

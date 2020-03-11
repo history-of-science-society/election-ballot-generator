@@ -6,7 +6,7 @@ const icons = require("evil-icons");
 const iconPack = {
   sprite: icons.sprite,
   twitter: icons.icon("ei-sc-twitter", { size: "s", class: "nominee__icon" }),
-  website: icons.icon("ei-external-link", { size: "s", class: "nominee__icon" })
+  website: icons.icon("ei-link", { size: "s", class: "nominee__icon" })
 };
 const nominees = axios
   .get("https://www.formstack.com/api/v2/form/2995119/submission.json", {
@@ -133,7 +133,6 @@ class Nominee {
       const twitter = RegExp("twitter|@");
 
       if (twitter.test(test.value)) {
-        const ending = test.value.match(/(\w+)\/?$/);
         return {
           source: "twitter",
           url: test.value,
