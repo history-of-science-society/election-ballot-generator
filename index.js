@@ -51,7 +51,13 @@ class Nominee {
     this.hss = this.getMultiline(item.data["61992804"]);
     this.campaignStatement = this.getMultiline(item.data["75506917"]);
     this.relatedActivities = this.getMultiline(item.data["61992804"]);
-    this.headshot = this.getValue(item.data["61994616"]);
+    this.img = axios.get(
+      "https://res.cloudinary.com/hss/image/fetch/" +
+        encodeURIComponent(this.getValue(item.data["61994616"]))
+    );
+    this.headshot =
+      "https://res.cloudinary.com/hss/image/fetch/w_600,h_600,c_fill,g_face,f_auto/" +
+      this.getValue(item.data["61994616"]);
     this.pub1 = this.getPub(89179115, item.data);
     this.pub2 = this.getPub(89179410, item.data);
     this.pub3 = this.getPub(89179431, item.data);
