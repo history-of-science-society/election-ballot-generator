@@ -64,11 +64,13 @@
     <main class="fsBody">
       <!-- Council  -->
       <section class="nominee">
+        <h2>Nominees for Council</h2>
         <% council.forEach(function(nominee) { %> <%-
         include('partials/nominee', {nominee: nominee}); %> <% }) %>
       </section>
       <!-- Secretary  -->
       <section class="nominee">
+        <h2>Nominee for Secretary</h2>
         <% secretary.forEach(function(nominee) { %> <%-
         include('partials/nominee', {nominee: nominee}); %> <% }) %>
       </section>
