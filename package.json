@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node index && postcss dist/css/main.css --use autoprefixer -o dist/css/main-p.css",
-    "scss": "node-sass -w src/scss/main.scss sass -o dist/css"
+    "scss": "node-sass --output-style expanded -w src/scss/main.scss -o dist/css "
   },
   "author": "Ryan Feigenbaum",
   "license": "ISC",

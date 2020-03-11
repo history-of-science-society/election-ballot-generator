@@ -187,9 +187,12 @@ const str = fs.readFileSync("src/index.ejs", "utf-8");
 // Compile template and render data
 let template = ejs.compile(str);
 nominees.then(e => {
-  const compiled = template(e);
-  fs.writeFile(path.join("dist", "index.html"), compiled, err => {
-    if (err) return console.log(err);
-    console.log("Election data > index.html");
+  // const compiled = template(e);
+
+  ejs.renderFile(__dirname + "/src/index.ejs", e, function(err, str) {
+    fs.writeFile(path.join("dist", "index.html"), str, err => {
+      if (err) return console.log(err);
+      console.log("Election data > index.html");
+    });
   });
 });
