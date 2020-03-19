@@ -19,10 +19,6 @@ const nominees = axios
     const { data } = response;
     return data;
   })
-  .catch(function(error) {
-    // handle error
-    console.log(error);
-  })
   .then(function(data) {
     const nominees = [];
     for (let item of data.submissions) {
@@ -30,12 +26,31 @@ const nominees = axios
       nominees.push(nominee);
     }
     const nomineeObject = {
-      council: nominees.filter(item => item.position === "Council"),
+      council: nominees
+        .filter(item => item.position === "Council")
+        .sort((a, b) => (a.last > b.last ? 1 : -1)),
       secretary: nominees.filter(item => item.position === "Secretary"),
+      delegate: nominees.filter(item => item.position === "Council Delegate"),
+      nomcom: nominees
+        .filter(item => item.position === "Nominating Committee")
+        .sort((a, b) => {
+          if (a.last < b.last) {
+            return -1;
+          }
+          if (a.last > b.last) {
+            return 1;
+          }
+          return 0;
+        }),
       nominees: nominees,
       sprite: { icons: iconPack.sprite }
     };
+
     return nomineeObject;
+  })
+  .catch(function(error) {
+    // handle error
+    console.log(error);
   });
 
 class Nominee {
@@ -51,10 +66,14 @@ class Nominee {
     this.hss = this.getMultiline(item.data["61992804"]);
     this.campaignStatement = this.getMultiline(item.data["75506917"]);
     this.relatedActivities = this.getMultiline(item.data["61992804"]);
-    this.img = axios.get(
-      "https://res.cloudinary.com/hss/image/fetch/" +
-        encodeURIComponent(this.getValue(item.data["61994616"]))
-    );
+    this.img = axios
+      .get(
+        "https://res.cloudinary.com/hss/image/fetch/" +
+          encodeURIComponent(this.getValue(item.data["61994616"]))
+      )
+      .catch(function(error) {
+        console.log(error);
+      });
     this.headshot =
       "https://res.cloudinary.com/hss/image/fetch/w_600,h_600,c_fill,g_face,f_auto/" +
       this.getValue(item.data["61994616"]);
@@ -82,7 +101,7 @@ class Nominee {
 
   getName(value) {
     const first = value.match(/first = (\w+)/)[1];
-    const last = value.match(/\w+$/)[0];
+    const last = value.match(/[\w\s]+$/)[0];
     return { name: first + " " + last, first: first, last: last };
   }
 
