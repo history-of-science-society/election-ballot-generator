@@ -30,6 +30,7 @@ const nominees = axios
         .filter(item => item.position === "Council")
         .sort((a, b) => (a.last > b.last ? 1 : -1)),
       secretary: nominees.filter(item => item.position === "Secretary"),
+      treasurer: nominees.filter(item => item.position === "Treasurer"),
       delegate: nominees.filter(item => item.position === "Council Delegate"),
       nomcom: nominees
         .filter(item => item.position === "Nominating Committee")
@@ -45,7 +46,6 @@ const nominees = axios
       nominees: nominees,
       sprite: { icons: iconPack.sprite }
     };
-
     return nomineeObject;
   })
   .catch(function(error) {
@@ -100,9 +100,12 @@ class Nominee {
   }
 
   getName(value) {
-    const first = value.match(/first = (\w+)/)[1];
-    const last = value.match(/[\w\s]+$/)[0];
-    return { name: first + " " + last, first: first, last: last };
+    const nameArray = value.split(/\n/);
+    const name = {};
+    name.first = nameArray[0].match(/first = ([\s\w]+)/)[1];
+    name.last = nameArray[1].match(/last = ([\s\w]+)/)[1];
+    name.name = name.first + " " + name.last;
+    return name;
   }
 
   getPub(type, data) {
@@ -152,24 +155,34 @@ class Nominee {
   }
 
   getWebsite(test) {
+    const web = {
+      twitter: { name: null, url: null, icon: null },
+      website: { name: null, url: null, icon: null }
+    };
     if (!test) {
       return null;
     } else {
       const twitter = RegExp("twitter|@");
 
-      if (twitter.test(test.value)) {
-        return {
-          source: "twitter",
-          url: test.value,
-          icon: iconPack.twitter
-        };
-      }
-      return {
-        source: "website",
-        url: test.value,
-        icon: iconPack.website
-      };
+      const values = test.value.split(";");
+      values.forEach(url => {
+        if (twitter.test(url)) {
+          web.twitter = {
+            name: "@" + url.match(/\w+$/)[0],
+            url: url,
+            icon: iconPack.twitter
+          };
+        }
+
+        if (!twitter.test(url) && url)
+          web.website = {
+            name: "website",
+            url: url,
+            icon: iconPack.website
+          };
+      });
     }
+    return web;
   }
 
   getMultiline(test) {

@@ -13,26 +13,32 @@
       <!-- Council  -->
       <section class="nominee">
         <h2>Nominees for Council</h2>
-        <% council.forEach(function(nominee) { %> <%-
-        include('partials/nominee', {nominee: nominee}); %> <% }) %>
+        <% council.forEach(function(nominee, idx) { %> <%-
+        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
       </section>
       <!-- Nominating Committee -->
       <section class="nominee">
         <h2>Nominee for Council Delegate</h2>
-        <% nomcom.forEach(function(nominee) { %> <%- include('partials/nominee',
-        {nominee: nominee}); %> <% }) %>
+        <% nomcom.forEach(function(nominee, idx) { %> <%-
+        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
       </section>
       <!-- Council Delegate -->
       <section class="nominee">
         <h2>Nominee for Council Delegate</h2>
-        <% delegate.forEach(function(nominee) { %> <%-
-        include('partials/nominee', {nominee: nominee}); %> <% }) %>
+        <% delegate.forEach(function(nominee, idx) { %> <%-
+        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
       </section>
       <!-- Secretary  -->
       <section class="nominee">
         <h2>Nominee for Secretary</h2>
-        <% secretary.forEach(function(nominee) { %> <%-
-        include('partials/nominee', {nominee: nominee}); %> <% }) %>
+        <% secretary.forEach(function(nominee, idx) { %> <%-
+        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
+      </section>
+      <!-- Secretary  -->
+      <section class="nominee">
+        <h2>Nominee for Secretary</h2>
+        <% treasurer.forEach(function(nominee, idx) { %> <%-
+        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
       </section>
     </main>
   </body>

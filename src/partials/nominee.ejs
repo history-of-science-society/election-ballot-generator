@@ -1,6 +1,6 @@
 <article class="nominee__card">
   <p class="nominee__position-sought">
-    Running for <%= nominee.position %>
+    <%= idx + 1 %>. Running for <%= nominee.position %>
   </p>
   <div class="nominee__inner">
     <div class="nominee__img-container">
@@ -8,15 +8,25 @@
     </div>
     <header>
       <!-- Twitter and Website-->
-      <% if (nominee.website.source === 'twitter' || nominee.website.source ===
-      'website') { %>
-      <a class="nominee__header-link" href="<%= nominee.website.url %>">
+      <h3 id="<%= nominee.name %>">
+        <%= nominee.name %> <% if (nominee.website &&
+        nominee.website.website.url) { %>
+        <a
+          class="nominee__header-link"
+          href="<%= nominee.website.website.url %>"
+          ><%- nominee.website.website.icon %><%= nominee.website.website.name
+          %>
+        </a>
+
+        <% } %> <% if (nominee.website && nominee.website.twitter.url) { %>
+        <a
+          class="nominee__header-link"
+          href="<%= nominee.website.twitter.url %>"
+          ><%- nominee.website.twitter.icon %><%= nominee.website.twitter.name
+          %></a
+        >
         <% } %>
-        <h3 id="<%= nominee.name %>"><%= nominee.name %></h3>
-        <% if (nominee.website.source === 'twitter' || nominee.website.source
-        === 'website') { %> <%- nominee.website.icon %>
-      </a>
-      <% } %>
+      </h3>
     </header>
     <div class="nominee__section">
       <!-- Current Position  -->
