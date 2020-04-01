@@ -2,12 +2,7 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 const axios = require("axios").default;
-const icons = require("evil-icons");
-const iconPack = {
-  sprite: icons.sprite,
-  twitter: icons.icon("ei-sc-twitter", { size: "s", class: "nominee__icon" }),
-  website: icons.icon("ei-link", { size: "s", class: "nominee__icon" })
-};
+
 const nominees = axios
   .get("https://www.formstack.com/api/v2/form/2995119/submission.json", {
     params: {
@@ -43,8 +38,7 @@ const nominees = axios
           }
           return 0;
         }),
-      nominees: nominees,
-      sprite: { icons: iconPack.sprite }
+      nominees: nominees
     };
     return nomineeObject;
   })
@@ -102,8 +96,8 @@ class Nominee {
   getName(value) {
     const nameArray = value.split(/\n/);
     const name = {};
-    name.first = nameArray[0].match(/first = ([\s\w]+)/)[1];
-    name.last = nameArray[1].match(/last = ([\s\w]+)/)[1];
+    name.first = nameArray[0].match(/first = ([\s\w.]+)/)[1];
+    name.last = nameArray[1].match(/last = ([\s\wüç]+)/)[1];
     name.name = name.first + " " + name.last;
     return name;
   }
@@ -156,8 +150,8 @@ class Nominee {
 
   getWebsite(test) {
     const web = {
-      twitter: { name: null, url: null, icon: null },
-      website: { name: null, url: null, icon: null }
+      twitter: { name: null, url: null },
+      website: { name: null, url: null }
     };
     if (!test) {
       return null;
@@ -169,16 +163,14 @@ class Nominee {
         if (twitter.test(url)) {
           web.twitter = {
             name: "@" + url.match(/\w+$/)[0],
-            url: url,
-            icon: iconPack.twitter
+            url: url
           };
         }
 
         if (!twitter.test(url) && url)
           web.website = {
-            name: "website",
-            url: url,
-            icon: iconPack.website
+            name: this.first + " " + this.last + "'s Website",
+            url: url
           };
       });
     }

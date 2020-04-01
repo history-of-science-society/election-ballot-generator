@@ -5,41 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Election Ballot</title>
     <link rel="stylesheet" href="/dist/css/main.css" />
-    <link rel="stylesheet" href="/dist/css/evil-icons.min.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
   </head>
   <body>
-    <%- sprite.icons %>
-    <main class="fsBody">
-      <!-- Council  -->
-      <section class="nominee">
-        <h2>Nominees for Council</h2>
-        <% council.forEach(function(nominee, idx) { %> <%-
-        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-      </section>
-      <!-- Nominating Committee -->
-      <section class="nominee">
-        <h2>Nominee for Council Delegate</h2>
-        <% nomcom.forEach(function(nominee, idx) { %> <%-
-        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-      </section>
-      <!-- Council Delegate -->
-      <section class="nominee">
-        <h2>Nominee for Council Delegate</h2>
-        <% delegate.forEach(function(nominee, idx) { %> <%-
-        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-      </section>
-      <!-- Secretary  -->
-      <section class="nominee">
-        <h2>Nominee for Secretary</h2>
-        <% secretary.forEach(function(nominee, idx) { %> <%-
-        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-      </section>
-      <!-- Secretary  -->
-      <section class="nominee">
-        <h2>Nominee for Secretary</h2>
-        <% treasurer.forEach(function(nominee, idx) { %> <%-
-        include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-      </section>
+    <main class="section">
+      <div class="container">
+        <!-- Council  -->
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <h2 class="title is-2">Nominees for Council</h2>
+                <% council.forEach(function(nominee, idx) { %> <%-
+                include('partials/nominee', {nominee: nominee, idx}); %> <% })
+                %>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Nominating Committee -->
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <h2 class="title is-2">Nominee for Council Delegate</h2>
+                <% nomcom.forEach(function(nominee, idx) { %> <%-
+                include('partials/nominee', {nominee: nominee, idx}); %> <% })
+                %>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Council Delegate -->
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <h2 class="title is-2">Nominee for Council Delegate</h2>
+                <% delegate.forEach(function(nominee, idx) { %> <%-
+                include('partials/nominee', {nominee: nominee, idx}); %> <% })
+                %>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Secretary  -->
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <h2 class="title is-2">Nominee for Secretary</h2>
+                <% secretary.forEach(function(nominee, idx) { %> <%-
+                include('partials/nominee', {nominee: nominee, idx}); %> <% })
+                %>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Secretary  -->
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <h2 class="title is-2">Nominee for Treasurer</h2>
+                <% treasurer.forEach(function(nominee, idx) { %> <%-
+                include('partials/nominee', {nominee: nominee, idx}); %> <% })
+                %>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>
