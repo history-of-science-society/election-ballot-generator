@@ -16,7 +16,8 @@
     "bulma": "^0.8.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
-    "evil-icons": "^1.10.1"
+    "evil-icons": "^1.10.1",
+    "slugify": "^1.4.0"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",

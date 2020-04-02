@@ -7,78 +7,111 @@
     <link rel="stylesheet" href="/dist/css/main.css" />
     <script
       defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+      src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
     ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ywb0qrm.css" />
   </head>
   <body>
-    <main class="section">
+    <%- include('partials/header'); %>
+    <main id="main" class="section">
       <div class="container">
         <!-- Council  -->
         <section class="section">
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <h2 class="title is-2">Nominees for Council</h2>
-                <% council.forEach(function(nominee, idx) { %> <%-
-                include('partials/nominee', {nominee: nominee, idx}); %> <% })
-                %>
-              </div>
+          <div class="columns is-centered">
+            <div class="column is-6 is-offset-3">
+              <h2 class="title is-2" id="council">Nominees for Council</h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-3">
+              <%- include('partials/menu',{list: council}) %>
+            </div>
+            <div class="column is-6">
+              <% council.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
             </div>
           </div>
         </section>
         <!-- Nominating Committee -->
         <section class="section">
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <h2 class="title is-2">Nominee for Council Delegate</h2>
-                <% nomcom.forEach(function(nominee, idx) { %> <%-
-                include('partials/nominee', {nominee: nominee, idx}); %> <% })
-                %>
-              </div>
+          <div class="columns is-centered">
+            <div class="column is-6 is-offset-3">
+              <h2 class="title is-2" id="nomcom">
+                Nominees for Nominating Committee
+              </h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-3">
+              <%- include('partials/menu',{list: nomcom}) %>
+            </div>
+            <div class="column is-6">
+              <% nomcom.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
             </div>
           </div>
         </section>
         <!-- Council Delegate -->
         <section class="section">
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <h2 class="title is-2">Nominee for Council Delegate</h2>
-                <% delegate.forEach(function(nominee, idx) { %> <%-
-                include('partials/nominee', {nominee: nominee, idx}); %> <% })
-                %>
-              </div>
+          <div class="columns is-centered">
+            <div class="column is-6 is-offset-3">
+              <h2 class="title is-2" id="delegate">
+                Nominee for Council Delegate
+              </h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-3">
+              <%- include('partials/menu',{list: delegate}) %>
+            </div>
+            <div class="column is-6">
+              <% delegate.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
             </div>
           </div>
         </section>
         <!-- Secretary  -->
         <section class="section">
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <h2 class="title is-2">Nominee for Secretary</h2>
-                <% secretary.forEach(function(nominee, idx) { %> <%-
-                include('partials/nominee', {nominee: nominee, idx}); %> <% })
-                %>
-              </div>
+          <div class="columns is-centered">
+            <div class="column is-6 is-offset-3">
+              <h2 class="title is-2" id="secretary">Nominee for Secretary</h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-3">
+              <%- include('partials/menu',{list: secretary}) %>
+            </div>
+            <div class="column is-6">
+              <% secretary.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
             </div>
           </div>
         </section>
         <!-- Secretary  -->
         <section class="section">
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <h2 class="title is-2">Nominee for Treasurer</h2>
-                <% treasurer.forEach(function(nominee, idx) { %> <%-
-                include('partials/nominee', {nominee: nominee, idx}); %> <% })
-                %>
-              </div>
+          <div class="columns is-centered">
+            <div class="column is-6 is-offset-3">
+              <h2 class="title is-2" id="treasurer">Nominee for Treasurer</h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-3">
+              <%- include('partials/menu',{list: treasurer, position:
+              'Treasurer'}) %>
+            </div>
+            <div class="column is-6">
+              <% treasurer.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
             </div>
           </div>
         </section>
       </div>
     </main>
+    <a class="button rounded is-primary back-to-top" href="#top">
+      <span class="icon">
+        <i class="fas fa-arrow-up"></i>
+      </span>
+    </a>
+    <script src="../src/js/main.js"></script>
   </body>
 </html>

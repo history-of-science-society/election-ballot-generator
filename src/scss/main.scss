@@ -1,13 +1,14 @@
-$hss: rgb(102, 102, 51);
-$blue: rgb(51, 86, 102);
 $primary: #666633;
-
+$link: #335666;
+$family-secondary: adobe-garamond-pro, Georgia, Garamond, "Times New Roman",
+  serif;
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
 @import "../../node_modules/bulma/sass/elements/button.sass";
 @import "../../node_modules/bulma/sass/elements/container.sass";
 @import "../../node_modules/bulma/sass/elements/title.sass";
 @import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/menu.sass";
 @import "../../node_modules/bulma/sass/elements/tag.sass";
 @import "../../node_modules/bulma/sass/elements/icon.sass";
 @import "../../node_modules/bulma/sass/elements/content.sass";
@@ -17,6 +18,7 @@ $primary: #666633;
 @import "../../node_modules/bulma/sass/components/card.sass";
 @import "../../node_modules/bulma/sass/grid/columns.sass";
 @import "../../node_modules/bulma/sass/components/media.sass";
+@import "../../node_modules/bulma/sass/components/tabs.sass";
 
 * {
   box-sizing: border-box;
@@ -34,6 +36,12 @@ html {
 
 .card {
   margin: 2rem 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .content ul,
 .content ol {
@@ -56,95 +64,19 @@ html {
     width: auto;
   }
 }
-// main {
-//   max-width: 800px;
-//   margin: 0 auto;
-// }
 
-// .fsBody {
-//   .nominee {
-//     width: 100%;
-//     &__inner {
-//       padding: 0 1rem;
-//     }
-//     &__position-sought {
-//       background: #dddddd;
-//       margin: 1rem 0;
-//       padding: 0.25rem;
-//       font-weight: 600;
-//     }
-//     &__card {
-//       margin: 3rem 0;
-//     }
+.sticky-menu {
+  position: sticky;
+  top: 2rem;
+}
 
-//     &__img-container {
-//       height: 20rem;
-//       width: 20rem;
-//       max-width: 100%;
-//       img {
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//       }
-//     }
+.is-family-secondary {
+  font-weight: 700;
+  font-display: swap;
+}
 
-//     &__header-link {
-//       width: fit-content;
-//       display: flex;
-//       align-items: center;
-//     }
-
-//     &__icon svg {
-//       height: 1.5rem;
-//       width: 1.5rem;
-//     }
-//     &__label {
-//       font-size: 0.95rem;
-//       text-transform: uppercase;
-//       opacity: 0.75;
-//       font-weight: 600;
-//       margin-bottom: 0;
-//       background: #dddddd;
-//       padding: 2px 5px;
-
-//       &:first-child,
-//       & + p {
-//         margin-top: 0;
-//       }
-//     }
-//     &__publications li {
-//       margin-bottom: 0.5rem;
-//     }
-//     &__publication-label {
-//       font-size: 0.75rem;
-//       text-transform: uppercase;
-//       padding: 0 3px;
-//       color: #ffffff;
-//       background-color: #464545;
-//       border-radius: 3px;
-//       margin-right: 5px;
-//       font-weight: 600;
-//     }
-//     &__publication-covers {
-//       display: flex;
-//       width: 100%;
-//       overflow-x: auto;
-//     }
-//     &__covers-links {
-//       margin: 1rem 1rem 0 1rem;
-//       &:hover img {
-//         filter: saturate(1);
-//         transition: filter 0.2s ease-out;
-//       }
-//     }
-//     &__covers-img {
-//       filter: saturate(0);
-//       transition: filter 0.2s ease-out;
-//       height: 250px;
-//     }
-//     &__footer {
-//       margin-top: 1rem;
-//       border-bottom: 0.25rem solid #dddddd;
-//     }
-//   }
-// }
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}

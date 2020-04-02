@@ -1,4 +1,4 @@
-<article class="card">
+<article id="<%= nominee.slug %>" class="card nominee__card">
   <div class="card-content">
     <div class="media">
       <div class="media-left">
@@ -13,7 +13,7 @@
           <span class="tag is-primary"><%= nominee.position %></span>
           <span class="tag"><%= idx + 1 %></span>
         </div>
-        <h3 class="title is-3" id="<%= nominee.name %>">
+        <h3 class="title is-3">
           <%= nominee.name %>
         </h3>
         <% if (nominee.website && nominee.website.website.url) { %>
@@ -64,14 +64,15 @@
     <% } %>
 
     <p class="title is-4">Publications</p>
+    <% if (nominee.bookGallery) { %>
     <div class="book-gallery">
-      <% if (nominee.bookGallery) { nominee.bookGallery.forEach(function(item) {
-      %>
+      <% nominee.bookGallery.forEach(function(item) { %>
       <a href="<%= item.url %>" class="book-gallery__link"
         ><img src="<%= item.img %>" class="book-gallery__img"
       /></a>
-      <% } ) } %>
+      <% } ) %>
     </div>
+    <% } %>
     <div class="content">
       <ol>
         <% if (nominee.pub1) { %>

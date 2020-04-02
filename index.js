@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 const axios = require("axios").default;
+const slugify = require("slugify");
 
 const nominees = axios
   .get("https://www.formstack.com/api/v2/form/2995119/submission.json", {
@@ -54,6 +55,7 @@ class Nominee {
     this.name = this.getName(item.data["61992777"].value).name;
     this.first = this.getName(item.data["61992777"].value).first;
     this.last = this.getName(item.data["61992777"].value).last;
+    this.slug = slugify(this.name.toLowerCase());
     this.website = this.getWebsite(item.data["61994743"]);
     this.currentPosition = this.getMultiline(item.data["61992786"]);
     this.relatedPosition = this.getMultiline(item.data["61993103"]);

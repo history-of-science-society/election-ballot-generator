@@ -1,0 +1,16 @@
+<div class="sticky-menu">
+  <aside class="menu card card-content">
+    <p class="menu-label">
+      <%= list[0].position %> <%= list.length === 1 ? 'Nominee' : 'Nominees'%>
+    </p>
+    <ul class="menu-list">
+      <% list.forEach(function(nominee){ %>
+      <li>
+        <a href="#<%= nominee.slug %>" id="target-<%= nominee.slug %>"
+          ><%= nominee.name %></a
+        >
+      </li>
+      <% }) %>
+    </ul>
+  </aside>
+</div>
