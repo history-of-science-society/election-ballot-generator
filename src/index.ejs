@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Election Ballot</title>
-    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
@@ -62,7 +62,7 @@
           </div>
           <div class="columns is-centered">
             <div class="column is-3">
-              <%- include('partials/menu',{list: delegate}) %>
+              <%- include('partials/menu', {list: delegate}) %>
             </div>
             <div class="column is-6">
               <% delegate.forEach(function(nominee, idx) { %> <%-
@@ -79,7 +79,7 @@
           </div>
           <div class="columns is-centered">
             <div class="column is-3">
-              <%- include('partials/menu',{list: secretary}) %>
+              <%- include('partials/menu', {list: secretary}) %>
             </div>
             <div class="column is-6">
               <% secretary.forEach(function(nominee, idx) { %> <%-
@@ -96,8 +96,7 @@
           </div>
           <div class="columns is-centered">
             <div class="column is-3">
-              <%- include('partials/menu',{list: treasurer, position:
-              'Treasurer'}) %>
+              <%- include('partials/menu',{list: treasurer}) %>
             </div>
             <div class="column is-6">
               <% treasurer.forEach(function(nominee, idx) { %> <%-
@@ -112,6 +111,6 @@
         <i class="fas fa-arrow-up"></i>
       </span>
     </a>
-    <script src="../src/js/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

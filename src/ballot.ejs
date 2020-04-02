@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Election Ballot</title>
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ywb0qrm.css" />
+  </head>
+  <body>
+    <main id="main" class="section">
+      <div class="container">
+        <!-- Council  -->
+        <section class="section">
+          <h2 class="title is-2" id="council">Nominees for Council</h2>
+
+          <table class="table is-fullwidth is-striped is-bordered">
+            <thead>
+              <th>Candidates</th>
+              <th>Vote 1</th>
+              <th>Vote 2</th>
+              <th>Vote 3</th>
+              <th>Vote 4</th>
+              <th>Vote 5</th>
+            </thead>
+            <tbody>
+              <% council.forEach(function(nominee, idx) { %>
+              <tr>
+                <td>
+                  <a href="/dist/#<%= nominee.slug %>"><%= nominee.name %></a>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              %> <% }) %>
+              <tr>
+                <td>Abstain</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <!-- Nominating Committee -->
+        <section class="section">
+          <div class="columns is-centered">
+            <div class="column is-10">
+              <h2 class="title is-2" id="council">
+                Nominees for Nominating Committee
+              </h2>
+
+              <table class="table">
+                <thead>
+                  <th>Candidates</th>
+                  <th>Vote 1</th>
+                  <th>Vote 2</th>
+                  <th>Vote 3</th>
+                  <th>Vote 4</th>
+                  <th>Vote 5</th>
+                </thead>
+                <tbody>
+                  <% nomcom.forEach(function(nominee, idx) { %>
+                  <tr>
+                    <td>
+                      <a href="/dist/#<%= nominee.slug %>"
+                        ><%= nominee.name %></a
+                      >
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  %> <% }) %>
+                  <tr>
+                    <td>Abstain</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- Secretary  -->
+        <section class="section">
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <h2 class="title is-2" id="secretary">Nominee for Secretary</h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <% secretary.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
+            </div>
+          </div>
+        </section>
+        <!-- Secretary  -->
+        <section class="section">
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <h2 class="title is-2" id="treasurer">Nominee for Treasurer</h2>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <% treasurer.forEach(function(nominee, idx) { %> <%-
+              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
