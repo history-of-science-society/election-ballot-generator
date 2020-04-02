@@ -20,6 +20,7 @@ $family-secondary: adobe-garamond-pro, Georgia, Garamond, "Times New Roman",
 @import "../../node_modules/bulma/sass/grid/columns.sass";
 @import "../../node_modules/bulma/sass/components/media.sass";
 @import "../../node_modules/bulma/sass/components/tabs.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
 
 * {
   box-sizing: border-box;

@@ -12,12 +12,76 @@
     <link rel="stylesheet" href="https://use.typekit.net/ywb0qrm.css" />
   </head>
   <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="https://hssonline.org" class="navbar-item">
+            <img src="/img/hss.png" alt="Logo" />
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <span class="navbar-item">
+              <a href="/" class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fas fa-vote-yea"></i>
+                </span>
+                <span>Candidates</span>
+              </a>
+            <span class="navbar-item">
+              <a href="/ballot" class="button is-primary is-inverted is-active">
+                <span class="icon">
+                  <i class="fas fa-vote-yea"></i>
+                </span>
+                <span>Vote</span>
+              </a>
+            </span>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fas fa-file-download"></i>
+                </span>
+                <span>Download the Ballot</span>
+              </a>
+            </span>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="far fa-heart"></i>
+                </span>
+                <span>Donate</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
     <main id="main" class="section">
       <div class="container">
         <!-- Council  -->
         <section class="section">
           <h2 class="title is-2" id="council">Nominees for Council</h2>
 
+          <form name="vote" method="post" data-netlify="true">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g Alex Smith">
+            </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+            </div>
+          </div>
+        </form>
           <table class="table is-fullwidth is-striped is-bordered">
             <thead>
               <th>Candidates</th>
