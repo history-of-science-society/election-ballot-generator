@@ -39,7 +39,8 @@ const nominees = axios
           }
           return 0;
         }),
-      nominees: nominees
+      nominees: nominees,
+      page: { medium: "is-medium", small: "" }
     };
     return nomineeObject;
   })
