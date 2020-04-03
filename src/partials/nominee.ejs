@@ -13,90 +13,96 @@
           <span class="tag is-primary"><%= nominee.position %></span>
           <span class="tag"><%= idx + 1 %></span>
         </div>
-        <h3 class="title is-3">
+        <p class="title is-4">
           <%= nominee.name %>
-        </h3>
-        <% if (nominee.website && nominee.website.website.url) { %>
-        <!-- Twitter and Website-->
-        <a class="button is-outlined" href="<%= nominee.website.website.url %>"
-          ><span class="icon"><i class="fas fa-external-link-alt"></i></span>
-          <p>
-            <%= nominee.website.website.name %>
-          </p>
-        </a>
-        <% } %> <% if (nominee.website && nominee.website.twitter.url) { %>
-        <a class="button is-outlined" href="<%= nominee.website.twitter.url %>"
-          ><span class="icon"><i class="fab fa-twitter"></i></span>
-          <p>
-            <%= nominee.website.twitter.name %>
-          </p></a
-        >
-        <% } %>
+        </p>
       </div>
     </div>
 
-    <!-- Current Position  -->
-    <% if (nominee.currentPosition) { %>
-    <p class="title is-4">Current Position</p>
-    <p><%= nominee.currentPosition %></p>
+    <% if (nominee.website && nominee.website.website.url) { %>
+    <!-- Twitter and Website-->
+    <a
+      class="button is-outlined nominee__website"
+      href="<%= nominee.website.website.url %>"
+      ><span class="icon"><i class="fas fa-external-link-alt"></i></span>
+      <p>
+        <%= nominee.website.website.name %>
+      </p>
+    </a>
+    <% } %> <% if (nominee.website && nominee.website.twitter.url) { %>
+    <a
+      class="button is-outlined nominee__website"
+      href="<%= nominee.website.twitter.url %>"
+      ><span class="icon"><i class="fab fa-twitter"></i></span>
+      <p>
+        <%= nominee.website.twitter.name %>
+      </p></a
+    >
     <% } %>
-    <!-- Related Position  -->
-    <% if (nominee.relatedPosition) { %>
-    <p class="">Related Position(s)</p>
-    <p><%= nominee.relatedPosition %></p>
-    <% } %>
-    <!-- HSS Related Statement  -->
-    <% if (nominee.hss) { %>
-    <p class="title is-4">HSS and Related Activities</p>
-    <div class="content">
-      <ul>
-        <% nominee.hss.forEach(function(item) { %>
-        <li><%- item %></li>
-        <% }) %>
-      </ul>
-    </div>
-    <p><% nominee.hss %></p>
-    <% } %>
-    <!-- Campaign Statement  -->
-    <% if (nominee.campaignStatement) { %>
-    <p class="title is-4">Campaign Statement</p>
-    <p><%= nominee.campaignStatement %></p>
-    <% } %>
+    <div>
+      <!-- Current Position  -->
+      <% if (nominee.currentPosition) { %>
+      <p class="title is-5">Current Position</p>
+      <p><%= nominee.currentPosition %></p>
+      <% } %>
+      <!-- Related Position  -->
+      <% if (nominee.relatedPosition) { %>
+      <p class="">Related Position(s)</p>
+      <p><%= nominee.relatedPosition %></p>
+      <% } %>
+      <!-- HSS Related Statement  -->
+      <% if (nominee.hss) { %>
+      <p class="title is-5">HSS and Related Activities</p>
+      <div class="content">
+        <ul>
+          <% nominee.hss.forEach(function(item) { %>
+          <li><%- item %></li>
+          <% }) %>
+        </ul>
+      </div>
+      <p><% nominee.hss %></p>
+      <% } %>
+      <!-- Campaign Statement  -->
+      <% if (nominee.campaignStatement) { %>
+      <p class="title is-5">Campaign Statement</p>
+      <p><%= nominee.campaignStatement %></p>
+      <% } %>
 
-    <p class="title is-4">Publications</p>
-    <% if (nominee.bookGallery) { %>
-    <div class="book-gallery">
-      <% nominee.bookGallery.forEach(function(item) { %>
-      <a href="<%= item.url %>" class="book-gallery__link"
-        ><img src="<%= item.img %>" class="book-gallery__img"
-      /></a>
-      <% } ) %>
-    </div>
-    <% } %>
-    <div class="content">
-      <ol>
-        <% if (nominee.pub1) { %>
-        <li><%- nominee.pub1 %></li>
-        <% } %> <% if (nominee.pub2) { %>
-        <li><%- nominee.pub2 %></li>
-        <% } %> <% if (nominee.pub3) { %>
-        <li><%- nominee.pub3 %></li>
-        <% } %> <% if (nominee.pub4) { %>
-        <li><%- nominee.pub4 %></li>
-        <% } %> <% if (nominee.pub5) { %>
-        <li><%- nominee.pub5 %></li>
-        <% } %> <% if (nominee.pub6) { %>
-        <li><%- nominee.pub6 %></li>
-        <% } %> <% if (nominee.pub7) { %>
-        <li><%- nominee.pub7 %></li>
-        <% } %> <% if (nominee.pub8) { %>
-        <li><%- nominee.pub8 %></li>
-        <% } %> <% if (nominee.pub9) { %>
-        <li><%- nominee.pub9 %></li>
-        <% } %> <% if (nominee.pub10) { %>
-        <li><%- nominee.pub10 %></li>
-        <% } %>
-      </ol>
+      <p class="title is-5">Publications</p>
+      <% if (nominee.bookGallery) { %>
+      <div class="book-gallery">
+        <% nominee.bookGallery.forEach(function(item) { %>
+        <a href="<%= item.url %>" class="book-gallery__link"
+          ><img src="<%= item.img %>" class="book-gallery__img"
+        /></a>
+        <% } ) %>
+      </div>
+      <% } %>
+      <div class="content">
+        <ol>
+          <% if (nominee.pub1) { %>
+          <li><%- nominee.pub1 %></li>
+          <% } %> <% if (nominee.pub2) { %>
+          <li><%- nominee.pub2 %></li>
+          <% } %> <% if (nominee.pub3) { %>
+          <li><%- nominee.pub3 %></li>
+          <% } %> <% if (nominee.pub4) { %>
+          <li><%- nominee.pub4 %></li>
+          <% } %> <% if (nominee.pub5) { %>
+          <li><%- nominee.pub5 %></li>
+          <% } %> <% if (nominee.pub6) { %>
+          <li><%- nominee.pub6 %></li>
+          <% } %> <% if (nominee.pub7) { %>
+          <li><%- nominee.pub7 %></li>
+          <% } %> <% if (nominee.pub8) { %>
+          <li><%- nominee.pub8 %></li>
+          <% } %> <% if (nominee.pub9) { %>
+          <li><%- nominee.pub9 %></li>
+          <% } %> <% if (nominee.pub10) { %>
+          <li><%- nominee.pub10 %></li>
+          <% } %>
+        </ol>
+      </div>
     </div>
   </div>
 </article>

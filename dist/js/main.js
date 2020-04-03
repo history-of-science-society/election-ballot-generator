@@ -38,3 +38,12 @@ window.addEventListener(
   },
   false
 );
+
+// Menu Toggle
+const hamburger = document.querySelector("span[data-target=navbarMenuHeroA]");
+const menu = document.getElementById("navbarMenuHeroA");
+const toggleMenu = el => {
+  el.target.classList.toggle("is-active");
+  menu.classList.toggle("is-active");
+};
+hamburger.addEventListener("click", toggleMenu);
