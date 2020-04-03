@@ -36,8 +36,12 @@ html {
   color: #ffffff;
 }
 
+.nominee__section {
+  margin-bottom: 5rem;
+}
+
 .card-content .title.is-5 {
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
   margin-top: 1rem;
   &:first-child {
     margin-top: 0;
