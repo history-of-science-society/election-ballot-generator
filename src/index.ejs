@@ -1,169 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Election Ballot</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
-    ></script>
-    <link rel="stylesheet" href="https://use.typekit.net/ywb0qrm.css" />
-  </head>
-  <body>
-    <%- include('partials/header', {size: 'is-medium'}); %>
-    <main id="main" class="section">
-      <div class="container">
-        <!-- Council  -->
-        <section class="nominee__section">
-          <div class="columns is-centered">
-            <div class="column is-9">
-              <h2 class="title is-2" id="council">Nominees for Council</h2>
-              <p class="content">
-                The HSS Council is the ultimate authority of the Society.
-                Comprised of 22 members, the Council includes 15 members elected
-                from the membership (5 elected each year for 3-year terms), 7
-                officers that make up the Executive Committee (President,
-                Vice-President, Treasurer, Secretary, Editor, Council Delegate,
-                and Executive Director; the Editor and Executive Director are ex
-                officio non-voting members), and the immediate Past President.
-              </p>
-              <p class="content">
-                It is expected that Council members attend each of the 3 annual
-                meetings for which they were elected. It is also expected that
-                Council members will respond in a timely way to ad interim
-                matters and will serve on various committees. Council activities
-                consist primarily of discussing and voting on critical issues,
-                such as budgets, policies and procedures, approving delegates
-                for service, and other important elements.
-              </p>
-              <p class="content">
-                Members will be able to select up to 5 of the candidates.
-              </p>
-            </div>
+<%- include('partials/head'); %>
+<body>
+  <%- include('partials/header', {active: 'home'}); %>
+  <main id="main" class="section">
+    <div class="container">
+      <!-- Council  -->
+      <section class="nominee__section">
+        <div class="columns is-centered">
+          <div class="column is-9">
+            <h2 class="title is-2" id="council">Nominees for Council</h2>
+            <p class="content">
+              The HSS Council is the ultimate authority of the Society.
+              Comprised of 22 members, the Council includes 15 members elected
+              from the membership (5 elected each year for 3-year terms), 7
+              officers that make up the Executive Committee (President,
+              Vice-President, Treasurer, Secretary, Editor, Council Delegate,
+              and Executive Director; the Editor and Executive Director are ex
+              officio non-voting members), and the immediate Past President.
+            </p>
+            <p class="content">
+              It is expected that Council members attend each of the 3 annual
+              meetings for which they were elected. It is also expected that
+              Council members will respond in a timely way to ad interim matters
+              and will serve on various committees. Council activities consist
+              primarily of discussing and voting on critical issues, such as
+              budgets, policies and procedures, approving delegates for service,
+              and other important elements.
+            </p>
+            <p class="content">
+              Members will be able to select up to 5 of the candidates.
+            </p>
           </div>
-          <div class="columns is-centered">
-            <div class="column is-3">
-              <%- include('partials/menu',{list: council}) %>
-            </div>
-            <div class="column is-6">
-              <% council.forEach(function(nominee, idx) { %> <%-
-              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-            </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-3">
+            <%- include('partials/menu',{list: council}) %>
           </div>
-        </section>
-        <!-- Nominating Committee -->
-        <section class="nominee__section">
-          <div class="columns is-centered">
-            <div class="column is-9">
-              <h2 class="title is-2" id="nomcom">
-                Nominees for Nominating Committee
-              </h2>
-              <p class="content">
-                The HSS Nominating Committee consists of the Member At-Large and
-                4 other members of the HSS membership. The members elected to
-                the committee will serve a term of 2 years, with 2 of the 4
-                members being elected each year. Members selected from this
-                group will prepare lists of candidates for future elections.
-              </p>
-              <p class="content">
-                Members will be able to select up to 2 of the following
-                candidates.
-              </p>
-            </div>
+          <div class="column is-6">
+            <% council.forEach(function(nominee, idx) { %> <%-
+            include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
           </div>
-          <div class="columns is-centered">
-            <div class="column is-3">
-              <%- include('partials/menu',{list: nomcom}) %>
-            </div>
-            <div class="column is-6">
-              <% nomcom.forEach(function(nominee, idx) { %> <%-
-              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-            </div>
+        </div>
+      </section>
+      <!-- Nominating Committee -->
+      <section class="nominee__section">
+        <div class="columns is-centered">
+          <div class="column is-9">
+            <h2 class="title is-2" id="nomcom">
+              Nominees for Nominating Committee
+            </h2>
+            <p class="content">
+              The HSS Nominating Committee consists of the Member At-Large and 4
+              other members of the HSS membership. The members elected to the
+              committee will serve a term of 2 years, with 2 of the 4 members
+              being elected each year. Members selected from this group will
+              prepare lists of candidates for future elections.
+            </p>
+            <p class="content">
+              Members will be able to select up to 2 of the following
+              candidates.
+            </p>
           </div>
-        </section>
-        <!-- Council Delegate -->
-        <section class="nominee__section">
-          <div class="columns is-centered">
-            <div class="column is-9">
-              <h2 class="title is-2" id="delegate">
-                Nominee for Council Delegate
-              </h2>
-              <p class="content">
-                The Nominating Committee consists of four at-large members and a
-                Council Delegate, all of whom are elected by the membership. The
-                committee chair is appointed by the President of the HSS.
-              </p>
-            </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-3">
+            <%- include('partials/menu',{list: nomcom}) %>
           </div>
-          <div class="columns is-centered">
-            <div class="column is-3">
-              <%- include('partials/menu', {list: delegate}) %>
-            </div>
-            <div class="column is-6">
-              <% delegate.forEach(function(nominee, idx) { %> <%-
-              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-            </div>
+          <div class="column is-6">
+            <% nomcom.forEach(function(nominee, idx) { %> <%-
+            include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
           </div>
-        </section>
-        <!-- Secretary  -->
-        <section class="nominee__section">
-          <div class="columns is-centered">
-            <div class="column is-9">
-              <h2 class="title is-2" id="secretary">Nominee for Secretary</h2>
-              <p class="content">
-                Duties of the Secretary include attending all meetings of the
-                Council, preserving the full and correct minutes of the
-                proceedings of all such meetings, and signing and executing all
-                corporate documents and instruments whereupon the Secretary’s
-                signature may be lawfully required.
-              </p>
-            </div>
+        </div>
+      </section>
+      <!-- Council Delegate -->
+      <section class="nominee__section">
+        <div class="columns is-centered">
+          <div class="column is-9">
+            <h2 class="title is-2" id="delegate">
+              Nominee for Council Delegate
+            </h2>
+            <p class="content">
+              The Nominating Committee consists of four at-large members and a
+              Council Delegate, all of whom are elected by the membership. The
+              committee chair is appointed by the President of the HSS.
+            </p>
           </div>
-          <div class="columns is-centered">
-            <div class="column is-3">
-              <%- include('partials/menu', {list: secretary}) %>
-            </div>
-            <div class="column is-6">
-              <% secretary.forEach(function(nominee, idx) { %> <%-
-              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-            </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-3">
+            <%- include('partials/menu', {list: delegate}) %>
           </div>
-        </section>
-        <!-- Secretary  -->
-        <section class="nominee__section">
-          <div class="columns is-centered">
-            <div class="column is-9">
-              <h2 class="title is-2" id="treasurer">Nominee for Treasurer</h2>
-              <p class="content">
-                Duties of the Treasurer include rendering to the President and
-                to the Council at its meetings, or whenever otherwise requested,
-                correct statements and reports showing the financial condition
-                of the HSS and submitting a preliminary report with the budget
-                proposal to the Executive Committee at their semi-annual
-                meeting, and a final annual report to the Council at least 14
-                days before the annual meeting.
-              </p>
-            </div>
+          <div class="column is-6">
+            <% delegate.forEach(function(nominee, idx) { %> <%-
+            include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
           </div>
-          <div class="columns is-centered">
-            <div class="column is-3">
-              <%- include('partials/menu',{list: treasurer}) %>
-            </div>
-            <div class="column is-6">
-              <% treasurer.forEach(function(nominee, idx) { %> <%-
-              include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
-            </div>
+        </div>
+      </section>
+      <!-- Secretary  -->
+      <section class="nominee__section">
+        <div class="columns is-centered">
+          <div class="column is-9">
+            <h2 class="title is-2" id="secretary">Nominee for Secretary</h2>
+            <p class="content">
+              Duties of the Secretary include attending all meetings of the
+              Council, preserving the full and correct minutes of the
+              proceedings of all such meetings, and signing and executing all
+              corporate documents and instruments whereupon the Secretary’s
+              signature may be lawfully required.
+            </p>
           </div>
-        </section>
-      </div>
-    </main>
-    <a class="button rounded is-primary back-to-top" href="#top">
-      <span class="icon">
-        <i class="fas fa-arrow-up"></i>
-      </span>
-    </a>
-    <script src="/js/main.js"></script>
-  </body>
-</html>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-3">
+            <%- include('partials/menu', {list: secretary}) %>
+          </div>
+          <div class="column is-6">
+            <% secretary.forEach(function(nominee, idx) { %> <%-
+            include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
+          </div>
+        </div>
+      </section>
+      <!-- Secretary  -->
+      <section class="nominee__section">
+        <div class="columns is-centered">
+          <div class="column is-9">
+            <h2 class="title is-2" id="treasurer">Nominee for Treasurer</h2>
+            <p class="content">
+              Duties of the Treasurer include rendering to the President and to
+              the Council at its meetings, or whenever otherwise requested,
+              correct statements and reports showing the financial condition of
+              the HSS and submitting a preliminary report with the budget
+              proposal to the Executive Committee at their semi-annual meeting,
+              and a final annual report to the Council at least 14 days before
+              the annual meeting.
+            </p>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-3">
+            <%- include('partials/menu',{list: treasurer}) %>
+          </div>
+          <div class="column is-6">
+            <% treasurer.forEach(function(nominee, idx) { %> <%-
+            include('partials/nominee', {nominee: nominee, idx}); %> <% }) %>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <a class="button rounded is-primary back-to-top" href="#top">
+    <span class="icon">
+      <i class="fas fa-arrow-up"></i>
+    </span>
+  </a>
+  <script src="/js/main.js"></script>
+</body>
+<%- include('partials/foot'); %>

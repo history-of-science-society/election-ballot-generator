@@ -98,3 +98,15 @@ html {
   bottom: 1rem;
   right: 1rem;
 }
+.print {
+  display: none;
+}
+@media print {
+  .hero {
+    display: none;
+  }
+
+  .print {
+    display: block;
+  }
+}

@@ -1,4 +1,7 @@
-<section class="hero is-primary <%= size %>" id="top">
+<section
+  class="hero is-primary <% if (active === 'home') { %>is-medium<% } %>"
+  id="top"
+>
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <nav class="navbar">
@@ -17,21 +20,24 @@
           <div class="navbar-end">
             <a
               href="/"
-              class="navbar-item <%= size === 'is-medium' ? 'is-active' : '' %>"
+              class="navbar-item <% if (active === 'home') { %>is-active<% } %>"
             >
               <span class="icon"><i class="fas fa-users"></i></span>
               <span>Candidates</span></a
             >
             <a
               href="/ballot"
-              class="navbar-item <%= size !== 'is-medium' ? 'is-active' : '' %>"
+              class="navbar-item <% if (active === 'ballot') { %>is-active<% } %>"
             >
               <span class="icon">
                 <i class="fas fa-vote-yea"></i>
               </span>
               <span>Vote</span></a
             >
-            <a class="navbar-item">
+            <a
+              href="/paper"
+              class="navbar-item <% if (active === 'paper') { %>is-active<% } %>"
+            >
               <span class="icon">
                 <i class="fas fa-file-download"></i>
               </span>
@@ -54,17 +60,17 @@
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title is-family-secondary">
+      <h1 class="title is-family-secondary is-1">
         History of Science Society
       </h1>
       <h2 class="subtitle">
-        2020 Election Ballot
+        2020 Election
       </h2>
     </div>
   </div>
 
   <!-- Hero footer: will stick at the bottom -->
-  <% if (size === 'is-medium') { %>
+  <% if (active === 'home') { %>
   <div class="hero-foot">
     <nav class="tabs">
       <div class="container">

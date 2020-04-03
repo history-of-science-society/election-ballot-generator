@@ -1,0 +1,149 @@
+<%- include('partials/head'); %>
+<body>
+  <%- include('partials/header', {active:'paper'}); %>
+
+  <main class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-9">
+          <h2 class="title is-2">Directions</h2>
+          <p class="content">
+            If you cannot complete the online ballot, you may print or download
+            this page. After making your selections, please email an image of
+            your ballot to the
+            <a
+              href="mailto:info@hssonline.org?subject=HSS Election"
+              target="_blank"
+              rel="noopener"
+              >HSS Executive Office</a
+            >.
+          </p>
+          <a
+            href="mailto:info@hssonline.org?subject=HSS Election"
+            class="button"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="icon">
+              <i class="fas fa-paper-plane"></i>
+            </span>
+            <span>HSS Executive Office</span>
+            <span class="print">: info@hssonline.org</span>
+          </a>
+          <hr />
+          <h2 class="title is-2">Candidates for Council</h2>
+          <p class="content">You can select up to five different candidates</p>
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Vote 1</th>
+                <th>Vote 2</th>
+                <th>Vote 3</th>
+                <th>Vote 4</th>
+                <th>Vote 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% council.forEach(function(nominee, idx) { %>
+              <tr>
+                <td><%= nominee.name %></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <h2 class="title is-2">Candidates for Nominating Committee</h2>
+          <p class="content">You can select up to two different candidates</p>
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Vote 1</th>
+                <th>Vote 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% nomcom.forEach(function(nominee, idx) { %>
+              <tr>
+                <td><%= nominee.name %></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <h2 class="title is-2">Candidate for Council Delegate</h2>
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Vote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% delegate.forEach(function(nominee, idx) { %>
+              <tr>
+                <td><%= nominee.name %></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Abstain</td>
+                <td></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <h2 class="title is-2">Candidate for Secretary</h2>
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Vote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% secretary.forEach(function(nominee, idx) { %>
+              <tr>
+                <td><%= nominee.name %></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Abstain</td>
+                <td></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <h2 class="title is-2">Candidate for Treasurer</h2>
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Vote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% treasurer.forEach(function(nominee, idx) { %>
+              <tr>
+                <td><%= nominee.name %></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Abstain</td>
+                <td></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+<%- include('partials/foot'); %>

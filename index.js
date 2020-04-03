@@ -211,7 +211,7 @@ const ejs = require("ejs");
 // Get template
 const str = fs.readFileSync("src/index.ejs", "utf-8");
 const ballot = fs.readFileSync("src/ballot.ejs", "utf-8");
-
+const paper = fs.readFileSync("src/paper.ejs", "utf-8");
 // Compile template and render data
 let template = ejs.compile(str);
 let ballotTemplate = ejs.compile(ballot);
@@ -229,6 +229,13 @@ nominees.then(e => {
     fs.writeFile(path.join("dist/ballot", "index.html"), ballot, err => {
       if (err) return console.log(err);
       console.log("ballot data > index.html");
+    });
+  });
+
+  ejs.renderFile(__dirname + "/src/paper.ejs", e, function(err, paper) {
+    fs.writeFile(path.join("dist/paper", "index.html"), paper, err => {
+      if (err) return console.log(err);
+      console.log("paper data > index.html");
     });
   });
 });
