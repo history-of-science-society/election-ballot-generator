@@ -41,7 +41,7 @@ html {
 }
 
 .card-content .title.is-5 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   margin-top: 1rem;
   &:first-child {
     margin-top: 0;
@@ -69,10 +69,13 @@ html {
   display: flex;
   padding: 0.5rem;
   margin: 1rem 0;
+  overflow: auto;
 
   &__link {
     height: 150px;
     margin-right: 1rem;
+    flex-shrink: 0;
+
     &:last-child {
       margin-right: 0;
     }
@@ -93,6 +96,9 @@ html {
   font-display: swap;
 }
 
+.content li {
+  overflow-wrap: break-word;
+}
 .back-to-top {
   position: fixed;
   bottom: 1rem;

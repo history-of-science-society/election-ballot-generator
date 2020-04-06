@@ -9336,7 +9336,7 @@ html {
 }
 
 .card-content .title.is-5 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -9369,11 +9369,13 @@ html {
   display: flex;
   padding: 0.5rem;
   margin: 1rem 0;
+  overflow: auto;
 }
 
 .book-gallery__link {
   height: 150px;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 .book-gallery__link:last-child {
@@ -9393,6 +9395,10 @@ html {
 .is-family-secondary {
   font-weight: 700;
   font-display: swap;
+}
+
+.content li {
+  overflow-wrap: break-word;
 }
 
 .back-to-top {

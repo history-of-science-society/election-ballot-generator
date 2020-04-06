@@ -7,7 +7,7 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a href="https://hssonline.org" class="navbar-item">
+          <a href="/" class="navbar-item">
             <img src="/img/hss.png" alt="Logo" />
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
@@ -43,12 +43,24 @@
               </span>
               <span>Paper Ballot</span>
             </a>
+            <a
+              href="https://hssonline.org"
+              class="navbar-item <% if (active === 'paper') { %>is-active<% } %>"
+            >
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>HSS Home</span>
+            </a>
             <span class="navbar-item">
-              <a class="button is-primary is-inverted">
-                <span class="icon is-danger">
+              <a
+                href="http://weblink.donorperfect.com/hss-donate"
+                class="button is-primary is-inverted"
+              >
+                <span class="icon has-text-danger">
                   <i class="far fa-heart"></i>
                 </span>
-                <span>Donate</span>
+                <span class="has-text-danger">Donate</span>
               </a>
             </span>
           </div>
@@ -72,7 +84,7 @@
   <!-- Hero footer: will stick at the bottom -->
   <% if (active === 'home') { %>
   <div class="hero-foot">
-    <nav class="tabs">
+    <nav class="tabs is-centered is-boxed">
       <div class="container">
         <ul>
           <li><a href="#council">Council</a></li>
