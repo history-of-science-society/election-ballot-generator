@@ -6175,7 +6175,3 @@ html {
     display: none; }
   .print {
     display: block; } }
-
-table td:not([align]),
-table th:not([align]) {
-  text-align: center; }

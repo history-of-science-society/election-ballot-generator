@@ -6,16 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node index && npm run css && postcss src/css/main.css -o dist/css/main.css && npm run js",
+    "dev": "node index && npm run css && postcss src/css/main.css -o dist/css/main.css && npm run js && npx http-server ./dist",
     "dev-css": "node-sass --output-style expanded -w src/scss/main.scss -o dist/css ",
     "css": "node-sass src/scss/main.scss -o src/css",
     "js": "npx babel src/js/main.js --out-file dist/js/main.js --presets=@babel/preset-env,babel-preset-minify"
   },
   "author": "Ryan Feigenbaum",
   "license": "ISC",
-  "dependencies": {
-    "http-server": "^0.12.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "http-server": "^0.12.1",
+    "webpack": "^4.42.1",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
