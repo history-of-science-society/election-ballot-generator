@@ -6175,3 +6175,16 @@ html {
     display: none; }
   .print {
     display: block; } }
+
+.table__cell--blank {
+  min-width: 200px; }
+
+.table__council .table__cell--blank {
+  min-width: initial; }
+
+table td:not([align]) {
+  text-align: center; }
+
+.fsMatrix tr th:last-child,
+.fsMatrix tr td:last-child {
+  border-right: none; }
