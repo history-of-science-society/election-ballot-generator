@@ -7,15 +7,15 @@ const slugify = require("slugify");
 const nominees = axios
   .get("https://www.formstack.com/api/v2/form/2995119/submission.json", {
     params: {
-      data: 1
+      data: 1,
     },
-    headers: { Authorization: `Bearer ${process.env.FORMSTACK_API}` }
+    headers: { Authorization: `Bearer ${process.env.FORMSTACK_API}` },
   })
-  .then(function(response) {
+  .then(function (response) {
     const { data } = response;
     return data;
   })
-  .then(function(data) {
+  .then(function (data) {
     const nominees = [];
     for (let item of data.submissions) {
       const nominee = new Nominee(item);
@@ -23,13 +23,13 @@ const nominees = axios
     }
     const nomineeObject = {
       council: nominees
-        .filter(item => item.position === "Council")
+        .filter((item) => item.position === "Council")
         .sort((a, b) => (a.last > b.last ? 1 : -1)),
-      secretary: nominees.filter(item => item.position === "Secretary"),
-      treasurer: nominees.filter(item => item.position === "Treasurer"),
-      delegate: nominees.filter(item => item.position === "Council Delegate"),
+      secretary: nominees.filter((item) => item.position === "Secretary"),
+      treasurer: nominees.filter((item) => item.position === "Treasurer"),
+      delegate: nominees.filter((item) => item.position === "Council Delegate"),
       nomcom: nominees
-        .filter(item => item.position === "Nominating Committee")
+        .filter((item) => item.position === "Nominating Committee")
         .sort((a, b) => {
           if (a.last < b.last) {
             return -1;
@@ -40,11 +40,11 @@ const nominees = axios
           return 0;
         }),
       nominees: nominees,
-      page: { medium: "is-medium", small: "" }
+      page: { medium: "is-medium", small: "" },
     };
     return nomineeObject;
   })
-  .catch(function(error) {
+  .catch(function (error) {
     // handle error
     console.log(error);
   });
@@ -68,7 +68,7 @@ class Nominee {
         "https://res.cloudinary.com/hss/image/fetch/" +
           encodeURIComponent(this.getValue(item.data["61994616"]))
       )
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
     this.headshot =
@@ -154,7 +154,7 @@ class Nominee {
   getWebsite(test) {
     const web = {
       twitter: { name: null, url: null },
-      website: { name: null, url: null }
+      website: { name: null, url: null },
     };
     if (!test) {
       return null;
@@ -162,18 +162,18 @@ class Nominee {
       const twitter = RegExp("twitter|@");
 
       const values = test.value.split(";");
-      values.forEach(url => {
+      values.forEach((url) => {
         if (twitter.test(url)) {
           web.twitter = {
             name: "@" + url.match(/\w+$/)[0],
-            url: url
+            url: url,
           };
         }
 
         if (!twitter.test(url) && url)
           web.website = {
             name: this.first + " " + this.last + "'s Website",
-            url: url
+            url: url,
           };
       });
     }
@@ -210,30 +210,30 @@ const ejs = require("ejs");
 
 // Get template
 const str = fs.readFileSync("src/index.ejs", "utf-8");
-const ballot = fs.readFileSync("src/ballot.ejs", "utf-8");
+const ballot = fs.readFileSync("src/vote.ejs", "utf-8");
 const paper = fs.readFileSync("src/paper.ejs", "utf-8");
 // Compile template and render data
 let template = ejs.compile(str);
 let ballotTemplate = ejs.compile(ballot);
-nominees.then(e => {
+nominees.then((e) => {
   // const compiled = template(e);
 
-  ejs.renderFile(__dirname + "/src/index.ejs", e, function(err, str) {
-    fs.writeFile(path.join("dist", "index.html"), str, err => {
+  ejs.renderFile(__dirname + "/src/index.ejs", e, function (err, str) {
+    fs.writeFile(path.join("dist", "index.html"), str, (err) => {
       if (err) return console.log(err);
       console.log("election data > index.html");
     });
   });
 
-  ejs.renderFile(__dirname + "/src/ballot.ejs", e, function(err, ballot) {
-    fs.writeFile(path.join("dist/ballot", "index.html"), ballot, err => {
+  ejs.renderFile(__dirname + "/src/vote.ejs", e, function (err, ballot) {
+    fs.writeFile(path.join("dist/vote", "index.html"), ballot, (err) => {
       if (err) return console.log(err);
       console.log("ballot data > index.html");
     });
   });
 
-  ejs.renderFile(__dirname + "/src/paper.ejs", e, function(err, paper) {
-    fs.writeFile(path.join("dist/paper", "index.html"), paper, err => {
+  ejs.renderFile(__dirname + "/src/paper.ejs", e, function (err, paper) {
+    fs.writeFile(path.join("dist/paper", "index.html"), paper, (err) => {
       if (err) return console.log(err);
       console.log("paper data > index.html");
     });
