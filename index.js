@@ -100,7 +100,7 @@ class Nominee {
     const nameArray = value.split(/\n/);
     const name = {};
     name.first = nameArray[0].match(/first = ([\s\w.]+)/)[1];
-    name.last = nameArray[1].match(/last = ([\s\wüç]+)/)[1];
+    name.last = nameArray[1].match(/last = ([\s\wüçí]+)/)[1];
     name.name = name.first + " " + name.last;
     return name;
   }
