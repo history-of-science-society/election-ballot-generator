@@ -28,7 +28,7 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "node-sass": "^4.13.1",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "postcss-cli": "^7.1.0",
     "slugify": "^1.4.0"
   }
